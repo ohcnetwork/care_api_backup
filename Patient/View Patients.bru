@@ -7,11 +7,5 @@ meta {
 get {
   url: {{url}}/api/v1/patient
   body: none
-  auth: apikey
-}
-
-auth:apikey {
-  key: Authorization
-  value: {{auth}}
-  placement: header
+  auth: inherit
 }

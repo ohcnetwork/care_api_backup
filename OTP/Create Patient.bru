@@ -6,10 +6,25 @@ meta {
 
 post {
   url: {{url}}/api/v1/otp/patient/
-  body: none
+  body: json
   auth: bearer
 }
 
 auth:bearer {
-  token: 
+  token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoicGF0aWVudF9sb2dpbiIsImV4cCI6MTczNDIwMDMxMywiaWF0IjoxNzM0MTk2NzEzLCJqdGkiOiJjMDFmNTAzOTFlMGU0YjU2YTNlNjFmYTZhZTYyODJjOCIsInBob25lX251bWJlciI6Iis5MTkyNDMwODM4MTcifQ.0e9hPy6sy5DtqRfot_Pj-Q6x6QesI20kOFlqNAJp4KU
+}
+
+body:json {
+  {
+        "name": "Dummy Patient 17",
+        "gender": "1",
+        "phone_number": "+gfdgdfgdfg",
+        "address": "Test Patient Address",
+        "date_of_birth": "2001-01-01",
+        "year_of_birth": 2001,
+        "state" : 1,
+        "district" : 7,
+        "local_body" : 6,
+        "pincode" : 690506
+      }
 }
