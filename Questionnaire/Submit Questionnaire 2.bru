@@ -1,0 +1,42 @@
+meta {
+  name: Submit Questionnaire 2
+  type: http
+  seq: 9
+}
+
+post {
+  url: {{url}}/api/v1/questionnaire/vignesh-test/submit/
+  body: json
+  auth: apikey
+}
+
+auth:apikey {
+  key: Authorization
+  value: {{auth}}
+  placement: header
+}
+
+body:json {
+  {
+  	"resource_id": "0f9552bd-1498-4b92-8f62-a83ad6f493b6",
+  	"encounter": "40faecc6-6599-48cd-bc2a-dd9e73b920f9",
+  	"results": [
+  		{
+  			"question_id": "cbf59886-dcad-4750-8c83-03e84265a495",
+  			"values": [{
+  				"value": "123"
+  			}]
+  		},
+          {
+  			"question_id": "f874f6cb-984d-4e8f-baee-b164d947420c",
+  			"values": [{
+  				"value": "123"
+  			}]
+  		}
+  	]
+  }
+}
+
+docs {
+  Creates a new Questionnaire
+}

@@ -1,0 +1,25 @@
+meta {
+  name: Lookup Code
+  type: http
+  seq: 6
+}
+
+post {
+  url: {{url}}/api/v1/valueset/lookup_code/
+  body: json
+  auth: apikey
+}
+
+auth:apikey {
+  key: Authorization
+  value: {{auth}}
+  placement: header
+}
+
+body:json {
+  {
+      "display": "Low blood pressure",
+      "system": "http://snomed.info/sct",
+      "code": "45007003"
+  }
+}

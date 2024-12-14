@@ -1,0 +1,25 @@
+meta {
+  name: Past Responses
+  type: http
+  seq: 12
+}
+
+get {
+  url: {{url}}/api/v1/questionnaire/past_responses/?patient=0f9552bd-1498-4b92-8f62-a83ad6f493b6
+  body: json
+  auth: apikey
+}
+
+params:query {
+  patient: 0f9552bd-1498-4b92-8f62-a83ad6f493b6
+}
+
+auth:apikey {
+  key: Authorization
+  value: {{auth}}
+  placement: header
+}
+
+docs {
+  Creates a new Questionnaire
+}

@@ -1,0 +1,17 @@
+meta {
+  name: Retrieve Valueset
+  type: http
+  seq: 3
+}
+
+get {
+  url: {{url}}/api/v1/valueset/system-observation/
+  body: none
+  auth: apikey
+}
+
+auth:apikey {
+  key: Authorization
+  value: {{auth}}
+  placement: header
+}

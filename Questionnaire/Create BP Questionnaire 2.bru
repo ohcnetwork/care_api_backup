@@ -1,0 +1,642 @@
+meta {
+  name: Create BP Questionnaire 2
+  type: http
+  seq: 5
+}
+
+post {
+  url: {{url}}/api/v1/questionnaire/
+  body: json
+  auth: apikey
+}
+
+auth:apikey {
+  key: Authorization
+  value: {{auth}}
+  placement: header
+}
+
+body:json {
+  {
+      "version": "1.0.0",
+      "title": "Nursing Assessment Form 2",
+      "description": "Comprehensive nursing assessment including physical examination, routine checks, and vitals.",
+      "status": "active",
+      "subject_type": "patient",
+      "slug": "nursing_assessment",
+      "code": [
+          {
+              "system": "http://loinc.org",
+              "code": "28655-9",
+              "display": "Nursing assessment"
+          }
+      ],
+      "questions": [
+          {
+              "link_id": "1",
+              "text": "Physical Examination",
+              "type": "group",
+              "isObservation": true,
+              "code": {
+                  "system": "http://snomed.info/sct",
+                  "code": "5880005",
+                  "display": "Physical examination"
+              },
+              "questions": [
+                  {
+                      "link_id": "1.1",
+                      "text": "Physical Examination Info",
+                      "type": "text",
+                      "required": false,
+                      "code": {
+                          "system": "http://loinc.org",
+                          "code": "29545-1",
+                          "display": "Physical findings"
+                      }
+                  },
+                  {
+                      "link_id": "1.2",
+                      "text": "Other details",
+                      "type": "text",
+                      "repeats": true,
+                      "required": false,
+                      "code": {
+                          "system": "http://loinc.org",
+                          "code": "48767-8",
+                          "display": "Annotation comment"
+                      }
+                  }
+              ]
+          },
+          {
+              "link_id": "2",
+              "text": "Routine",
+              "type": "group",
+              "isObservation": true,
+              "code": {
+                  "system": "http://snomed.info/sct",
+                  "code": "308335008",
+                  "display": "Patient observation"
+              },
+              "questions": [
+                  {
+                      "link_id": "2.1",
+                      "text": "Sleep",
+                      "type": "choice",
+                      "code": {
+                          "system": "http://snomed.info/sct",
+                          "code": "258158006",
+                          "display": "Sleep pattern"
+                      },
+                      "answerOption": [
+                          {
+                              "value": "EXCESSIVE",
+                              "display": "Excessive"
+                          },
+                          {
+                              "value": "SATISFACTORY",
+                              "display": "Satisfactory"
+                          },
+                          {
+                              "value": "UNSATISFACTORY",
+                              "display": "Unsatisfactory"
+                          },
+                          {
+                              "value": "NO_SLEEP",
+                              "display": "No sleep"
+                          }
+                      ],
+                      "required": false
+                  },
+                  {
+                      "link_id": "2.2",
+                      "text": "Bowel",
+                      "type": "choice",
+                      "code": {
+                          "system": "http://snomed.info/sct",
+                          "code": "364612004",
+                          "display": "Bowel finding"
+                      },
+                      "repeats": true,
+                      "answerOption": [
+                          {
+                              "value": "NO_DIFFICULTY",
+                              "display": "No difficulty"
+                          },
+                          {
+                              "value": "CONSTIPATION",
+                              "display": "Constipation"
+                          },
+                          {
+                              "value": "DIARRHOEA",
+                              "display": "Diarrhoea"
+                          }
+                      ],
+                      "required": false
+                  }
+              ]
+          },
+          {
+              "link_id": "3",
+              "text": "Bladder",
+              "type": "group",
+              "isObservation": true,
+              "code": {
+                  "system": "http://snomed.info/sct",
+                  "code": "364621009",
+                  "display": "Bladder finding"
+              },
+              "questions": [
+                  {
+                      "link_id": "3.1",
+                      "text": "Drainage",
+                      "type": "choice",
+                      "code": {
+                          "system": "http://snomed.info/sct",
+                          "code": "410673003",
+                          "display": "Urinary drainage procedure"
+                      },
+                      "answerOption": [
+                          {
+                              "value": "NORMAL",
+                              "display": "Normal"
+                          },
+                          {
+                              "value": "CONDOM_CATHETER",
+                              "display": "Condom Catheter"
+                          },
+                          {
+                              "value": "DIAPER",
+                              "display": "Diaper"
+                          },
+                          {
+                              "value": "INTERMITTENT_CATHETER",
+                              "display": "Intermittent Catheter"
+                          },
+                          {
+                              "value": "CONTINUOUS_INDWELLING_CATHETER",
+                              "display": "Continuous Indwelling Catheter"
+                          },
+                          {
+                              "value": "CONTINUOUS_SUPRAPUBIC_CATHETER",
+                              "display": "Continuous Suprapubic Catheter"
+                          },
+                          {
+                              "value": "UROSTOMY",
+                              "display": "Urostomy"
+                          }
+                      ],
+                      "required": false
+                  },
+                  {
+                      "link_id": "3.2",
+                      "text": "Issues",
+                      "type": "choice",
+                      "code": {
+                          "system": "http://snomed.info/sct",
+                          "code": "106019003",
+                          "display": "Urinary tract finding"
+                      },
+                      "answerOption": [
+                          {
+                              "value": "NO_ISSUES",
+                              "display": "No issues"
+                          },
+                          {
+                              "value": "INCONTINENCE",
+                              "display": "Incontinence"
+                          },
+                          {
+                              "value": "RETENTION",
+                              "display": "Retention"
+                          },
+                          {
+                              "value": "HESITANCY",
+                              "display": "Hesitancy"
+                          }
+                      ],
+                      "required": false
+                  },
+                  {
+                      "link_id": "3.3",
+                      "text": "Experiences Dysuria?",
+                      "type": "boolean",
+                      "code": {
+                          "system": "http://snomed.info/sct",
+                          "code": "49650001",
+                          "display": "Dysuria"
+                      },
+                      "required": false
+                  },
+                  {
+                      "link_id": "3.4",
+                      "text": "Frequency of Urination",
+                      "type": "choice",
+                      "code": {
+                          "system": "http://snomed.info/sct",
+                          "code": "162116003",
+                          "display": "Urinary frequency finding"
+                      },
+                      "answerOption": [
+                          {
+                              "value": "NORMAL",
+                              "display": "Normal"
+                          },
+                          {
+                              "value": "DECREASED",
+                              "display": "Decreased"
+                          },
+                          {
+                              "value": "INCREASED",
+                              "display": "Increased"
+                          }
+                      ],
+                      "required": false
+                  }
+              ]
+          },
+          {
+              "link_id": "4",
+              "text": "Nutrition",
+              "type": "group",
+              "isObservation": true,
+              "code": {
+                  "system": "http://snomed.info/sct",
+                  "code": "308445002",
+                  "display": "Nutritional finding"
+              },
+              "questions": [
+                  {
+                      "link_id": "4.1",
+                      "text": "Nutrition Route",
+                      "type": "choice",
+                      "code": {
+                          "system": "http://snomed.info/sct",
+                          "code": "284009009",
+                          "display": "Route of administration of nutrition"
+                      },
+                      "answerOption": [
+                          {
+                              "value": "ORAL",
+                              "display": "Oral"
+                          },
+                          {
+                              "value": "RYLES_TUBE",
+                              "display": "Ryle's Tube"
+                          },
+                          {
+                              "value": "GASTROSTOMY_OR_JEJUNOSTOMY",
+                              "display": "Gastrostomy / Jejunostomy"
+                          },
+                          {
+                              "value": "PEG",
+                              "display": "PEG"
+                          },
+                          {
+                              "value": "PARENTERAL_TUBING_FLUID",
+                              "display": "Parenteral Tubing (Fluid)"
+                          },
+                          {
+                              "value": "PARENTERAL_TUBING_TPN",
+                              "display": "Parenteral Tubing (TPN)"
+                          }
+                      ],
+                      "required": false,
+                      "answerConstraint": "required"
+                  },
+                  {
+                      "link_id": "4.2",
+                      "text": "Oral issues",
+                      "type": "choice",
+                      "code": {
+                          "system": "http://snomed.info/sct",
+                          "code": "302199004",
+                          "display": "Feeding problem"
+                      },
+                      "enableWhen": [
+                          {
+                              "question": "4.1",
+                              "operator": "equals",
+                              "answer": "ORAL"
+                          }
+                      ],
+                      "enableBehavior": "all",
+                      "disabledDisplay": "hidden",
+                      "answerOption": [
+                          {
+                              "value": "NO_ISSUE",
+                              "display": "No issues"
+                          },
+                          {
+                              "value": "DYSPHAGIA",
+                              "display": "Dysphagia"
+                          },
+                          {
+                              "value": "ODYNOPHAGIA",
+                              "display": "Odynophagia"
+                          }
+                      ],
+                      "required": false,
+                      "answerConstraint": "required"
+                  },
+                  {
+                      "link_id": "4.3",
+                      "text": "Appetite",
+                      "type": "choice",
+                      "code": {
+                          "system": "http://snomed.info/sct",
+                          "code": "288465006",
+                          "display": "Appetite finding"
+                      },
+                      "answerOption": [
+                          {
+                              "value": "INCREASED",
+                              "display": "Increased"
+                          },
+                          {
+                              "value": "SATISFACTORY",
+                              "display": "Satisfactory"
+                          },
+                          {
+                              "value": "REDUCED",
+                              "display": "Reduced"
+                          },
+                          {
+                              "value": "NO_TASTE_FOR_FOOD",
+                              "display": "No taste for food"
+                          },
+                          {
+                              "value": "CANNOT_BE_ASSESSED",
+                              "display": "Cannot be assessed"
+                          }
+                      ],
+                      "required": false,
+                      "answerConstraint": "required"
+                  }
+              ]
+          },
+          {
+              "link_id": "5",
+              "text": "Vitals",
+              "type": "group",
+              "isObservation": true,
+              "code": {
+                  "system": "http://loinc.org",
+                  "code": "8716-3",
+                  "display": "Vital signs"
+              },
+              "questions": [
+                  {
+                      "link_id": "5.1",
+                      "text": "Blood Pressure",
+                      "type": "group",
+                      "repeats": true,
+                      "code": {
+                          "system": "http://loinc.org",
+                          "code": "85354-9",
+                          "display": "Blood pressure panel"
+                      },
+                      "questions": [
+                          {
+                              "link_id": "5.1.1",
+                              "text": "Systolic",
+                              "type": "decimal",
+                              "unit": "mmHg",
+                              "code": {
+                                  "system": "http://loinc.org",
+                                  "code": "8480-6",
+                                  "display": "Systolic blood pressure"
+                              },
+                              "validations": {
+                                  "min": 0,
+                                  "max": 250
+                              },
+                              "required": false
+                          },
+                          {
+                              "link_id": "5.1.2",
+                              "text": "Diastolic",
+                              "type": "decimal",
+                              "unit": "mmHg",
+                              "code": {
+                                  "system": "http://loinc.org",
+                                  "code": "8462-4",
+                                  "display": "Diastolic blood pressure"
+                              },
+                              "validations": {
+                                  "min": 0,
+                                  "max": 250
+                              },
+                              "required": false
+                          }
+                      ]
+                  },
+                  {
+                      "link_id": "5.2",
+                      "text": "Pulse",
+                      "type": "decimal",
+                      "unit": "bpm",
+                      "code": {
+                          "system": "http://loinc.org",
+                          "code": "8867-4",
+                          "display": "Heart rate"
+                      },
+                      "validations": {
+                          "min": 0,
+                          "max": 200
+                      },
+                      "required": false
+                  },
+                  {
+                      "link_id": "5.3",
+                      "text": "SpO₂",
+                      "type": "decimal",
+                      "unit": "%",
+                      "code": {
+                          "system": "http://loinc.org",
+                          "code": "59408-5",
+                          "display": "Oxygen saturation in Blood by Pulse oximetry"
+                      },
+                      "validations": {
+                          "min": 0,
+                          "max": 100
+                      },
+                      "required": false
+                  },
+                  {
+                      "link_id": "5.4",
+                      "text": "Blood Sugar Level",
+                      "type": "decimal",
+                      "unit": "mg/dL",
+                      "code": {
+                          "system": "http://loinc.org",
+                          "code": "2339-0",
+                          "display": "Glucose [Mass/volume] in Blood"
+                      },
+                      "validations": {
+                          "min": 0,
+                          "max": 700
+                      },
+                      "required": false
+                  }
+              ]
+          },
+          {
+              "link_id": "6",
+              "text": "Nursing Care",
+              "type": "group",
+              "isObservation": true,
+              "code": {
+                  "system": "http://snomed.info/sct",
+                  "code": "386053000",
+                  "display": "Evaluation of nursing care"
+              },
+              "questions": [
+                  {
+                      "link_id": "6.1",
+                      "text": "Procedures",
+                      "type": "choice",
+                      "repeats": true,
+                      "code": {
+                          "system": "http://snomed.info/sct",
+                          "code": "71388002",
+                          "display": "Procedure"
+                      },
+                      "answerOption": [
+                          {
+                              "value": "oral_care",
+                              "display": "Oral Care",
+                              "code": {
+                                  "system": "http://snomed.info/sct",
+                                  "code": "77436000",
+                                  "display": "Oral hygiene procedure"
+                              }
+                          },
+                          {
+                              "value": "hair_care",
+                              "display": "Hair Care",
+                              "code": {
+                                  "system": "http://snomed.info/sct",
+                                  "code": "229822000",
+                                  "display": "Hair care"
+                              }
+                          },
+                          {
+                              "value": "bed_bath",
+                              "display": "Bed Bath",
+                              "code": {
+                                  "system": "http://snomed.info/sct",
+                                  "code": "265567004",
+                                  "display": "Bed bath"
+                              }
+                          },
+                          {
+                              "value": "eye_care",
+                              "display": "Eye Care",
+                              "code": {
+                                  "system": "http://snomed.info/sct",
+                                  "code": "225358003",
+                                  "display": "Eye care procedure"
+                              }
+                          },
+                          {
+                              "value": "perineal_care",
+                              "display": "Perineal Care",
+                              "code": {
+                                  "system": "http://snomed.info/sct",
+                                  "code": "225366007",
+                                  "display": "Perineal care"
+                              }
+                          },
+                          {
+                              "value": "skin_care",
+                              "display": "Skin Care",
+                              "code": {
+                                  "system": "http://snomed.info/sct",
+                                  "code": "225369000",
+                                  "display": "Skin care"
+                              }
+                          },
+                          {
+                              "value": "wound_dressing",
+                              "display": "Wound Dressing",
+                              "code": {
+                                  "system": "http://snomed.info/sct",
+                                  "code": "225362001",
+                                  "display": "Wound dressing"
+                              }
+                          },
+                          {
+                              "value": "positioning",
+                              "display": "Positioning"
+                          }
+                      ],
+                      "required": false
+                  },
+                  {
+                      "link_id": "8",
+                      "text": "Lets Test Display",
+                      "type": "group",
+                      "code": {
+                          "system": "http://snomed.info/sct",
+                          "code": "225373007",
+                          "display": "Patient positioning"
+                      },
+                      "questions": [
+                          {
+                              "link_id": "8.1",
+                              "text": "###Physical Examination Info",
+                              "type": "display",
+                              "required": false,
+                              "code": {
+                                  "system": "http://snomed.info/sct",
+                                  "code": "225373007",
+                                  "display": "Patient positioning"
+                              }
+                          },
+                          {
+                              "link_id": "8.2",
+                              "text": "#Other details",
+                              "type": "display",
+                              "required": false,
+                              "code": {
+                                  "system": "http://snomed.info/sct",
+                                  "code": "225373007",
+                                  "display": "Patient positioning"
+                              }
+                          },
+                          {
+                              "link_id": "8.3",
+                              "text": "allergy",
+                              "type": "structured",
+                              "structured_type": "allergy_intolerance",
+                              "required": false,
+                              "code": {
+                                  "system": "http://snomed.info/sct",
+                                  "code": "225373007",
+                                  "display": "Patient positioning"
+                              }
+                          },
+                          {
+                              "link_id": "8.4",
+                              "text": "medication_request",
+                              "type": "structured",
+                              "structured_type": "medication_request",
+                              "required": false,
+                              "code": {
+                                  "system": "http://snomed.info/sct",
+                                  "code": "225373007",
+                                  "display": "Patient positioning"
+                              }
+                          }
+                      ]
+                  }
+              ]
+          }
+      ]
+  }
+}
+
+docs {
+  Creates a new Questionnaire
+}

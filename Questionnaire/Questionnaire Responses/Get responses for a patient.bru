@@ -1,0 +1,22 @@
+meta {
+  name: Get responses for a patient
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{url}}/api/v1/patient/0f9552bd-1498-4b92-8f62-a83ad6f493b6/questionnaire_response/?encounter=40faecc6-6599-48cd-bc2a-dd9e73b920f9
+  body: none
+  auth: apikey
+}
+
+params:query {
+  encounter: 40faecc6-6599-48cd-bc2a-dd9e73b920f9
+  ~questionnaire_slugs: <comma seperated here>
+}
+
+auth:apikey {
+  key: Authorization
+  value: {{auth}}
+  placement: header
+}

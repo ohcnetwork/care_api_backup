@@ -1,0 +1,23 @@
+meta {
+  name: Send OTP
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{url}}/api/v1/otp/send/
+  body: json
+  auth: apikey
+}
+
+auth:apikey {
+  key: Authorization
+  value: {{auth}}
+  placement: header
+}
+
+body:json {
+  {
+      "phone_number" : "+919562854642"
+  }
+}

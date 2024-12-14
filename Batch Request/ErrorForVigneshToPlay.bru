@@ -1,0 +1,75 @@
+meta {
+  name: ErrorForVigneshToPlay
+  type: http
+  seq: 2
+}
+
+post {
+  url: {{url}}/api/v1/batch_requests/
+  body: json
+  auth: apikey
+}
+
+auth:apikey {
+  key: Authorization
+  value: {{auth}}
+  placement: header
+}
+
+body:json {
+  {
+      "requests": [
+          {
+              "url": "/api/v1/questionnaire/bodhi_test/submit/",
+              "method": "POST",
+              "body": {
+                  "resource_id": "af7564f2-682c-43fc-81e4-d1583e5f31cf",
+                  "encounter": "d8ee0842-d213-469c-9e63-4549c2aa4610",
+                  "results": [
+                      {
+                          "question_id": "54c7b248-5ef0-4028-91ba-d9db02a59991",
+                          "values": [
+                              {
+                                  "value": "false"
+                              }
+                          ]
+                      },
+                      {
+                          "question_id": "30f54d4a-33b1-4c83-a260-c9fb0ee78fe1",
+                          "values": [
+                              {
+                                  "value": "false"
+                              }
+                          ]
+                      }
+                  ]
+              }
+          },{
+              "url": "/api/v1/questionnaire/bodhi_test/submit/",
+              "method": "POST",
+              "body": {
+                  "resource_id": "d8ee0842-d213-469c-9e63-4549c2aa4610",
+                  "encounter": "d8ee0842-d213-469c-9e63-4549c2aa4610",
+                  "results": [
+                      {
+                          "question_id": "54c7b248-5ef0-4028-91ba-d9db02a59991",
+                          "values": [
+                              {
+                                  "value": "123"
+                              }
+                          ]
+                      },
+                      {
+                          "question_id": "30f54d4a-33b1-4c83-a260-c9fb0ee78fe1",
+                          "values": [
+                              {
+                                  "value": "123"
+                              }
+                          ]
+                      }
+                  ]
+              }
+          }
+      ]
+  }
+}

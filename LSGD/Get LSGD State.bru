@@ -1,0 +1,17 @@
+meta {
+  name: Get LSGD State
+  type: http
+  seq: 1
+}
+
+get {
+  url: 
+  body: none
+  auth: apikey
+}
+
+auth:apikey {
+  key: Authorization
+  value: {{auth}}
+  placement: header
+}

@@ -1,0 +1,64 @@
+meta {
+  name: Create Patient Profile Questionnaire
+  type: http
+  seq: 7
+}
+
+post {
+  url: {{url}}/api/v1/questionnaire/
+  body: json
+  auth: apikey
+}
+
+auth:apikey {
+  key: Authorization
+  value: {{auth}}
+  placement: header
+}
+
+body:json {
+  {
+      "title": "test",
+      "description": "test",
+      "status": "active",
+      "subject_type": "patient",
+      "questions": [
+          {
+              "link_id": "123",
+              "type": "group",
+              "text": "Patient Profile",
+              "code": {
+                  "display": "Blood pressure",
+                  "system": "http://loinc.org",
+                  "code": "LP40259-1"
+              },
+              "questions": [
+                  {
+                      "link_id": "1234",
+                      "type": "decimal",
+                      "text": "Systolic Blood Pressure",
+                      "code": {
+                          "display": "Systolic blood pressure",
+                          "system": "http://loinc.org",
+                          "code": "8480-6"
+                      }
+                  },
+                  {
+                      "link_id": "12345",
+                      "type": "decimal",
+                      "text": "Diastolic Blood Pressure",
+                      "code": {
+                          "display": "Diastolic blood pressure",
+                          "system": "http://loinc.org",
+                          "code": "8462-4"
+                      }
+                  }
+              ]
+          }
+      ]
+  }
+}
+
+docs {
+  Creates a new Questionnaire
+}

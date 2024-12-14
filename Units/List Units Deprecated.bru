@@ -1,0 +1,21 @@
+meta {
+  name: List Units Deprecated
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{url}}/api/v1/units/?search=mercury
+  body: none
+  auth: apikey
+}
+
+params:query {
+  search: mercury
+}
+
+auth:apikey {
+  key: Authorization
+  value: {{auth}}
+  placement: header
+}

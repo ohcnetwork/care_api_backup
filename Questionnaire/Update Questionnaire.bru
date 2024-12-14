@@ -1,0 +1,72 @@
+meta {
+  name: Update Questionnaire
+  type: http
+  seq: 11
+}
+
+put {
+  url: {{url}}/api/v1/questionnaire/vignesh-test/
+  body: json
+  auth: apikey
+}
+
+auth:apikey {
+  key: Authorization
+  value: {{auth}}
+  placement: header
+}
+
+body:json {
+  {
+  	"title": "test",
+  	"slug": "vignesh-test",
+  	"description": "test",
+  	"status": "active",
+  	"subject_type": "patient",
+  	"questions": [
+  		{
+  			"styling_metadata": {
+  				"something": "something"
+  			},
+  			"link_id": "123",
+  			"type": "group",
+  			"text": "Blood Pressure",
+  			"required": true,
+  			"code": {
+  				"display": "Blood pressure",
+  				"system": "http://loinc.org",
+  				"code": "LP40259-1"
+  			},
+  			"questions": [
+  				{
+  					"id": "cbf59886-dcad-4750-8c83-03e84265a495",
+  					"link_id": "1234",
+  					"type": "decimal",
+  					"text": "Systolic Blood Pressure",
+  					"code": {
+  						"display": "Systolic blood pressure",
+  						"system": "http://loinc.org",
+  						"code": "8480-6"
+  					}
+  				},
+  				{
+  					"id": "f874f6cb-984d-4e8f-baee-b164d947420c",
+  					"link_id": "12345",
+  					"type": "choice",
+  					"answer_value_set" : "system-codition-code",
+  					"text": "Diastolic Blood Pressure",
+  					"code": {
+  						"display": "Diastolic blood pressure",
+  						"system": "http://loinc.org",
+  						"code": "8462-4"
+  					}
+  				}
+  			]
+  		}
+  	]
+  }
+}
+
+docs {
+  Creates a new Questionnaire
+}

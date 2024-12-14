@@ -1,0 +1,24 @@
+meta {
+  name: Login With OTP
+  type: http
+  seq: 2
+}
+
+post {
+  url: {{url}}/api/v1/otp/login/
+  body: json
+  auth: apikey
+}
+
+auth:apikey {
+  key: Authorization
+  value: {{auth}}
+  placement: header
+}
+
+body:json {
+  {
+      "phone_number" : "+919562854642",
+      "otp" : "45612"
+  }
+}

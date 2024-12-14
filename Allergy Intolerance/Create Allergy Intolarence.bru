@@ -1,0 +1,21 @@
+meta {
+  name: Create Allergy Intolarence
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{url}}/api/v1/patient/0f9552bd-1498-4b92-8f62-a83ad6f493b6/allergy_intolerance/
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "clinical_status": "active",
+      "verification_status": "confirmed",
+      "category": "medication",
+      "criticality": "low",
+      "encounter": "40faecc6-6199-48cd-bc2a-dd9e73b920f9"
+  }
+}

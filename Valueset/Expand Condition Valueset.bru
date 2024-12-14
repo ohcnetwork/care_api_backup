@@ -1,0 +1,23 @@
+meta {
+  name: Expand Condition Valueset
+  type: http
+  seq: 7
+}
+
+post {
+  url: {{url}}/api/v1/valueset/system-codition-code/expand/
+  body: json
+  auth: apikey
+}
+
+auth:apikey {
+  key: Authorization
+  value: {{auth}}
+  placement: header
+}
+
+body:json {
+  {
+      "search" : "Blood pressure"
+  }
+}

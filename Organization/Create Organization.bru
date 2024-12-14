@@ -1,0 +1,25 @@
+meta {
+  name: Create Organization
+  type: http
+  seq: 2
+}
+
+post {
+  url: {{url}}/api/v1/facility/4b1de304-3871-43d7-9204-20600d4a11b0/organizations/
+  body: json
+  auth: apikey
+}
+
+auth:apikey {
+  key: Authorization
+  value: {{auth}}
+  placement: header
+}
+
+body:json {
+  {
+      "org_type" : "dept",
+      "name" : "test",
+      "parent" : "36623782-0cb4-43e2-b8ed-d0d67b4a80ec"
+  }
+}

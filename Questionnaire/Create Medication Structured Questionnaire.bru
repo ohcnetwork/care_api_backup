@@ -1,0 +1,66 @@
+meta {
+  name: Create Medication Structured Questionnaire
+  type: http
+  seq: 4
+}
+
+post {
+  url: {{url}}/api/v1/questionnaire/
+  body: json
+  auth: apikey
+}
+
+auth:apikey {
+  key: Authorization
+  value: {{auth}}
+  placement: header
+}
+
+body:json {
+  {
+      "title": "test",
+      "description": "test",
+      "status": "active",
+      "subject_type": "patient",
+      "questions": [
+          {
+              "styling_metadata": {
+                  "something": "something"
+              },
+              "link_id": "123",
+              "type": "group",
+              "unit": "mm[Hg]",
+              "text": "Blood Pressure",
+              "code": {
+                  "display": "Blood pressure",
+                  "system": "http://loinc.org",
+                  "code": "LP40259-1"
+              },
+              "questions": [
+                  {
+                      "link_id": "1.1",
+                      "type": "text",
+                      "text": "A texxt field",
+                      
+                  },
+                  {
+                      "link_id": "1.2",
+                      "text": "medication_request",
+                      "type": "structured",
+                      "structured_type": "medication_request",
+                      "required": false,
+                      "code": {
+                          "system": "http://snomed.info/sct",
+                          "code": "225373007",
+                          "display": "Patient positioning"
+                      }
+                  }
+              ]
+          }
+      ]
+  }
+}
+
+docs {
+  Creates a new Questionnaire
+}

@@ -1,0 +1,17 @@
+meta {
+  name: Get all Valuesets
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{url}}/api/v1/valueset/
+  body: none
+  auth: apikey
+}
+
+auth:apikey {
+  key: Authorization
+  value: {{auth}}
+  placement: header
+}

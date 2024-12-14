@@ -1,0 +1,21 @@
+meta {
+  name: Get all Questionnaires
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{url}}/api/v1/questionnaire/
+  body: none
+  auth: apikey
+}
+
+auth:apikey {
+  key: Authorization
+  value: {{auth}}
+  placement: header
+}
+
+docs {
+  Get all Questionnaires in Care
+}

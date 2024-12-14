@@ -1,0 +1,22 @@
+meta {
+  name: Get Diagnosis for Patient
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{url}}/api/v1/patient/0f9552bd-1498-4b92-8f62-a83ad6f493b6/condition/?encounter=40faecc6-6199-48cd-bc2a-dd9e73b920f9&category=problem_list_item
+  body: none
+  auth: apikey
+}
+
+params:query {
+  encounter: 40faecc6-6199-48cd-bc2a-dd9e73b920f9
+  category: problem_list_item
+}
+
+auth:apikey {
+  key: Authorization
+  value: {{auth}}
+  placement: header
+}

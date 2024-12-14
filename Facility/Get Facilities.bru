@@ -1,0 +1,17 @@
+meta {
+  name: Get Facilities
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{url}}/api/v1/facility/
+  body: none
+  auth: apikey
+}
+
+auth:apikey {
+  key: Authorization
+  value: {{auth}}
+  placement: header
+}

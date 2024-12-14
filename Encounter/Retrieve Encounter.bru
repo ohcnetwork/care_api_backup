@@ -1,0 +1,17 @@
+meta {
+  name: Retrieve Encounter
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{url}}/api/v1/consultation/40faecc6-6599-48cd-bc2a-dd9e73b920f9/
+  body: none
+  auth: apikey
+}
+
+auth:apikey {
+  key: Authorization
+  value: {{auth}}
+  placement: header
+}

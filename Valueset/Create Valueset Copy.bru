@@ -1,0 +1,27 @@
+meta {
+  name: Create Valueset Copy
+  type: http
+  seq: 10
+}
+
+post {
+  url: {{url}}/api/v1/valueset/
+  body: json
+  auth: apikey
+}
+
+auth:apikey {
+  key: Authorization
+  value: {{auth}}
+  placement: header
+}
+
+body:json {
+  {
+      "slug" : "something-somthing",
+      "name" : "test",
+      "description" : "test test",
+      "status" : "active",
+      "compose" : {"include" : []}
+  }
+}
