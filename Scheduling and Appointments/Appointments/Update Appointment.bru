@@ -1,17 +1,17 @@
 meta {
-  name: List Appointments
+  name: Update Appointment
   type: http
-  seq: 4
+  seq: 3
 }
 
 get {
-  url: {{url}}/api/v1/facility/:facility_id/appointments/?status
+  url: {{url}}/api/v1/facility/:facility_id/appointments/?status=f
   body: none
   auth: inherit
 }
 
 params:query {
-  status: 
+  status: f
 }
 
 params:path {
