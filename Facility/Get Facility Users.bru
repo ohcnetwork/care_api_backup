@@ -1,0 +1,21 @@
+meta {
+  name: Get Facility Users
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{url}}/api/v1/facility/?name=facility 1
+  body: none
+  auth: inherit
+}
+
+params:query {
+  name: facility 1
+}
+
+auth:apikey {
+  key: Authorization
+  value: {{auth}}
+  placement: header
+}
