@@ -1,0 +1,28 @@
+meta {
+  name: Fetch slots for a day
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{url}}/api/v1/facility/:facility_id/slots/get_slots_for_day/
+  body: json
+  auth: inherit
+}
+
+params:path {
+  facility_id: f779a7a2-c7a1-499f-99dd-d8c39113b4d0
+}
+
+body:json {
+  
+  {
+    "resource" : "2ce8496c-098c-4768-b83b-d376e1433eda",
+    "day" : "2024-12-18"
+  }
+}
+
+docs {
+  This API will fetch slots for a given resource for a given day
+  
+}
