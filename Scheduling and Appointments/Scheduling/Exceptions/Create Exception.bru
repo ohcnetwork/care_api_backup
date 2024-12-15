@@ -1,0 +1,28 @@
+meta {
+  name: Create Exception
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{url}}/api/v1/facility/:facility_id/schedule_exceptions/
+  body: json
+  auth: inherit
+}
+
+params:path {
+  facility_id: 
+}
+
+body:json {
+  {
+    "doctor_username": "doctor",
+    "name": "Christmas Holiday",
+    "is_available": false,
+    "valid_from": "2024-12-22",
+    "valid_to": "2024-12-29",
+    "start_time": "00:00",
+    "end_time": "23:59",
+    "reason": "Reason"
+  }
+}

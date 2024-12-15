@@ -1,0 +1,21 @@
+meta {
+  name: List Exceptions
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{url}}/api/v1/facility/:facility_id/schedule_exceptions/?doctor_username=doctor&date_from=2024-12-1&date_to=2024-12-31
+  body: none
+  auth: inherit
+}
+
+params:query {
+  doctor_username: doctor
+  date_from: 2024-12-1
+  date_to: 2024-12-31
+}
+
+params:path {
+  facility_id: 
+}

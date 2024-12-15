@@ -1,0 +1,15 @@
+meta {
+  name: List Appointments
+  type: http
+  seq: 4
+}
+
+get {
+  url: /api/v1/facility/:facility_id/appointments/
+  body: none
+  auth: none
+}
+
+params:path {
+  facility_id: 
+}

@@ -1,0 +1,20 @@
+meta {
+  name: List Available Doctors
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{url}/api/v1/facility/:facility_id/appointments/available_doctors/?valid_from=2024-12-01&valid_to=2024-12-31
+  body: none
+  auth: inherit
+}
+
+params:query {
+  valid_from: 2024-12-01
+  valid_to: 2024-12-31
+}
+
+params:path {
+  facility_id: 
+}

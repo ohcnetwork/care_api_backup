@@ -1,0 +1,16 @@
+meta {
+  name: Delete Exception
+  type: http
+  seq: 3
+}
+
+delete {
+  url: {{url}}/api/v1/facility/:facility_id/schedule_exceptions/:schedule_exception_id/
+  body: none
+  auth: inherit
+}
+
+params:path {
+  schedule_exception_id: 
+  facility_id: 
+}
