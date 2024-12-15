@@ -5,16 +5,11 @@ meta {
 }
 
 get {
-  url: {{url}/api/v1/facility/:facility_id/appointments/available_doctors/?valid_from=2024-12-01&valid_to=2024-12-31
+  url: {{url}}/api/v1/facility/:facility_id/appointments/available_doctors/
   body: none
   auth: inherit
 }
 
-params:query {
-  valid_from: 2024-12-01
-  valid_to: 2024-12-31
-}
-
 params:path {
-  facility_id: 
+  facility_id: f779a7a2-c7a1-499f-99dd-d8c39113b4d0
 }

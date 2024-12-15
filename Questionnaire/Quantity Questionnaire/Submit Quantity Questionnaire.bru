@@ -10,40 +10,12 @@ post {
   auth: inherit
 }
 
-auth:apikey {
-  key: Authorization
-  value: {{auth}}
-  placement: header
-}
-
 body:json {
   {
       "resource_id": "0f9552bd-1498-4b92-8f62-a83ad6f493b6",
       "encounter": "40faecc6-6599-48cd-bc2a-dd9e73b920f9",
       "results": [
-          {
-              "question_id": "e3897f1d-1f89-4598-b505-289ef900e622",
-              "values": [
-                  {
-                      "value": "123"
-                  }
-              ]
-          },
-          {
-              "question_id": "2c7b20d8-88a5-4939-af57-6330b4a4a1ff",
-              "values": [
-                  {
-                      "value_quantity": {
-                          "value" : "100",
-                          "code": {
-                              "display": "Low blood pressure",
-                              "system": "http://snomed.info/sct",
-                              "code": "45007003"
-                          }
-                      }
-                  }
-              ]
-          }
+  
       ]
   }
 }
