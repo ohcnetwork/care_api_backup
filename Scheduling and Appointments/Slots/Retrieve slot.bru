@@ -1,0 +1,15 @@
+meta {
+  name: Retrieve slot
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{url}}/api/v1/facility/:facility_id/slots/f01d4bba-e39e-406d-b2b7-8d3ee8df78a3
+  body: none
+  auth: inherit
+}
+
+params:path {
+  facility_id: f779a7a2-c7a1-499f-99dd-d8c39113b4d0
+}
