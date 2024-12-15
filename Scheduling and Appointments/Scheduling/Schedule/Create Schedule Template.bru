@@ -11,27 +11,55 @@ post {
 }
 
 params:path {
-  facility_id: 
+  facility_id: f779a7a2-c7a1-499f-99dd-d8c39113b4d0
 }
 
 body:json {
   {
-    "doctor_username": "doctor",
     "valid_from": "2024-12-14",
     "valid_to": "2024-12-15",
     "name": "OP Consultations",
-    "availability": [
+    "resource": "2ce8496c-098c-4768-b83b-d376e1433eda",
+    "availabilities": [
       {
         "name": "Morning Consultations",
-        "slot_type": "Appointment",
-        "start_time": "09:00",
-        "end_time": "13:00",
+        "slot_type": "appointment",
         "slot_size_in_minutes": 10,
         "tokens_per_slot": 2,
-        "days_of_week": [
-          0,
-          1
-        ]
+        "reason": "something",
+        "availability": [{
+          "day_of_week": 1,
+          "start_time": "09:00",
+          "end_time": "11:00"
+        },{
+          "day_of_week": 2,
+          "start_time": "09:00",
+          "end_time": "11:00"
+        },{
+          "day_of_week": 3,
+          "start_time": "09:00",
+          "end_time": "11:00"
+        }]
+      },
+      {
+        "name": "Evening Consultations",
+        "slot_type": "appointment",
+        "slot_size_in_minutes": 10,
+        "tokens_per_slot": 2,
+        "reason": "something",
+        "availability": [{
+          "day_of_week": 1,
+          "start_time": "12:00",
+          "end_time": "14:00"
+        },{
+          "day_of_week": 2,
+          "start_time": "12:00",
+          "end_time": "14:00"
+        },{
+          "day_of_week": 3,
+          "start_time": "12:00",
+          "end_time": "14:00"
+        }]
       }
     ]
   }
