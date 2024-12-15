@@ -1,11 +1,11 @@
 meta {
-  name: List Patients
+  name: List Appointments
   type: http
-  seq: 3
+  seq: 2
 }
 
 get {
-  url: {{url}}/api/v1/otp/patient/
+  url: {{url}}/api/v1/otp/slots/get_appointments/
   body: none
   auth: bearer
 }

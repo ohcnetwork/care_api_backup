@@ -4,16 +4,20 @@ meta {
   seq: 3
 }
 
-get {
-  url: {{url}}/api/v1/facility/:facility_id/appointments/?status=f
-  body: none
+put {
+  url: {{url}}/api/v1/facility/:facility_id/appointments/33649392-3d83-4791-9452-0de7eea05509/
+  body: json
   auth: inherit
 }
 
 params:query {
-  status: f
+  ~status: 
 }
 
 params:path {
   facility_id: f779a7a2-c7a1-499f-99dd-d8c39113b4d0
+}
+
+body:json {
+  {"status" : "proposed"}
 }

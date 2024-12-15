@@ -1,15 +1,24 @@
 meta {
-  name: List Patients
+  name: Get Slots for day
   type: http
   seq: 3
 }
 
-get {
-  url: {{url}}/api/v1/otp/patient/
-  body: none
+post {
+  url: {{url}}/api/v1/otp/slots/get_slots_for_day/
+  body: json
   auth: bearer
 }
 
 auth:bearer {
   token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoicGF0aWVudF9sb2dpbiIsImV4cCI6MTczNDI5NzMyMSwiaWF0IjoxNzM0MjkzNzIxLCJqdGkiOiIyZWY1Njk4YzA3MTk0NjdmOWU3MWNlMTU0MmMzMDBkZCIsInBob25lX251bWJlciI6Iis5MTkyNDMwODM4MTcifQ.dJVNgZexC6BJL70ZKhMQv4Xo9PI5ukm1sEa337y4lE0
+}
+
+body:json {
+  
+  {
+    "facility" : "f779a7a2-c7a1-499f-99dd-d8c39113b4d0",
+    "resource" : "2ce8496c-098c-4768-b83b-d376e1433eda",
+    "day" : "2024-12-18"
+  }
 }

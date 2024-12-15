@@ -1,15 +1,22 @@
 meta {
-  name: List Patients
+  name: Create Appointment
   type: http
-  seq: 3
+  seq: 1
 }
 
-get {
-  url: {{url}}/api/v1/otp/patient/
-  body: none
+post {
+  url: {{url}}/api/v1/otp/slots/1107e9d0-d676-4566-a294-7f1d35a27f44/create_appointment/
+  body: json
   auth: bearer
 }
 
 auth:bearer {
   token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoicGF0aWVudF9sb2dpbiIsImV4cCI6MTczNDI5NzMyMSwiaWF0IjoxNzM0MjkzNzIxLCJqdGkiOiIyZWY1Njk4YzA3MTk0NjdmOWU3MWNlMTU0MmMzMDBkZCIsInBob25lX251bWJlciI6Iis5MTkyNDMwODM4MTcifQ.dJVNgZexC6BJL70ZKhMQv4Xo9PI5ukm1sEa337y4lE0
+}
+
+body:json {
+  {
+    "patient" : "0f9552bd-1498-4b92-8f62-a83ad6f493b6",
+    "reason_for_visit" : "sdfsd"
+  }
 }
