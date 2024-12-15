@@ -7,7 +7,7 @@ meta {
 post {
   url: {{url}}/api/v1/questionnaire/
   body: json
-  auth: apikey
+  auth: inherit
 }
 
 auth:apikey {
@@ -41,7 +41,7 @@ body:json {
                       "link_id": "1.1",
                       "type": "text",
                       "text": "A texxt field",
-                      
+
                   },
                   {
                       "link_id": "1.2",

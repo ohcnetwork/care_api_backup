@@ -7,17 +7,11 @@ meta {
 post {
   url: {{url}}/api/v1/otp/send/
   body: json
-  auth: apikey
-}
-
-auth:apikey {
-  key: Authorization
-  value: {{auth}}
-  placement: header
+  auth: inherit
 }
 
 body:json {
   {
-      "phone_number" : "+919243083817"
+      "phone_number" : "+918547673209"
   }
 }
