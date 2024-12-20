@@ -4,10 +4,10 @@ meta {
   seq: 4
 }
 
-get {
-  url: {{url}}/api/v1/facility/:facility_id/slots/f01d4bba-e39e-406d-b2b7-8d3ee8df78a3/
+post {
+  url: {{url}}/api/v1/facility/:facility_id/slots/availability_stats/
   body: json
-  auth: none
+  auth: inherit
 }
 
 params:path {
@@ -16,8 +16,8 @@ params:path {
 
 body:json {
   {
-    "from_date": "2024-12-18",
-    "to_date": "2024-12-18",
-    "resource": 2
+    "from_date": "2024-12-01",
+    "to_date": "2024-12-31",
+    "resource": "2ce8496c-098c-4768-b83b-d376e1433eda"
   }
 }
