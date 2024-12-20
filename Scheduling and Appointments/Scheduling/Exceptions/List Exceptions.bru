@@ -5,17 +5,11 @@ meta {
 }
 
 get {
-  url: {{url}}/api/v1/facility/:facility_id/schedule_exceptions/?doctor_username=doctor&date_from=2024-12-1&date_to=2024-12-31
+  url: {{url}}/api/v1/facility/:facility_id/schedule_exceptions/
   body: none
   auth: inherit
 }
 
-params:query {
-  doctor_username: doctor
-  date_from: 2024-12-1
-  date_to: 2024-12-31
-}
-
 params:path {
-  facility_id: 
+  facility_id: f779a7a2-c7a1-499f-99dd-d8c39113b4d0
 }

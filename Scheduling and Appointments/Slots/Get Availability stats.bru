@@ -1,0 +1,23 @@
+meta {
+  name: Get Availability stats
+  type: http
+  seq: 4
+}
+
+get {
+  url: {{url}}/api/v1/facility/:facility_id/slots/f01d4bba-e39e-406d-b2b7-8d3ee8df78a3/
+  body: json
+  auth: none
+}
+
+params:path {
+  facility_id: f779a7a2-c7a1-499f-99dd-d8c39113b4d0
+}
+
+body:json {
+  {
+    "from_date": "2024-12-18",
+    "to_date": "2024-12-18",
+    "resource": 2
+  }
+}
