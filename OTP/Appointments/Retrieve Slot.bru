@@ -1,0 +1,24 @@
+meta {
+  name: Retrieve Slot
+  type: http
+  seq: 4
+}
+
+get {
+  url: {{url}}/api/v1/otp/slots/eca6fea7-caf6-46b1-a8f6-770d34ae98ad/
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoicGF0aWVudF9sb2dpbiIsImV4cCI6MTczNDcwMjk4NCwiaWF0IjoxNzM0Njk5Mzg0LCJqdGkiOiJjMzAzZjgzMzVmNTI0Y2I3OGJkMGIzMDUwODZiNThhYyIsInBob25lX251bWJlciI6Iis5MTkyNDMwODM4MTcifQ.cKwiAmYxu1a_jn8c6bvUPhbzjeewfchLHog2L4ybFxY
+}
+
+body:json {
+  
+  {
+    "facility" : "f779a7a2-c7a1-499f-99dd-d8c39113b4d0",
+    "resource" : "2ce8496c-098c-4768-b83b-d376e1433eda",
+    "day" : "2024-12-18"
+  }
+}
