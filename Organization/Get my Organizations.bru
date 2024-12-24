@@ -5,13 +5,12 @@ meta {
 }
 
 get {
-  url: orguser{{url}}/api/v1/organization/?org_type=govt
+  url: {{url}}/api/v1/organization/mine/
   body: none
   auth: inherit
 }
 
 params:query {
-  org_type: govt
   ~parent: <parent_uuid>
   ~name: test
 }
