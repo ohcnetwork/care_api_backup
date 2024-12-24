@@ -4,8 +4,15 @@ meta {
   seq: 2
 }
 
-get {
-  url: {{url}}/api/v1/organization/c3f327ef-ade3-49f6-a9ed-9a4b8883fbcf/users/
-  body: none
+post {
+  url: {{url}}/api/v1/organization/5801368d-8556-4767-98e1-9bfdaf99dd82/users/
+  body: json
   auth: inherit
+}
+
+body:json {
+  {
+    "user" : "1f13c09c-ad07-4b95-9752-39d3aa4e9aad",
+    "role" :"13b809b2-24cd-407b-b82a-49240ff487bb"
+  }
 }
