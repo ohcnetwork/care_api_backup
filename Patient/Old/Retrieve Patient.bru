@@ -1,17 +1,13 @@
 meta {
-  name: Get my Organizations
+  name: Retrieve Patient
   type: http
-  seq: 3
+  seq: 2
 }
 
 get {
-  url: {{url}}/api/v1/organization/
+  url: {{url}}/api/v1/patient/0f9552bd-1498-4b92-8f62-a83ad6f493b6/
   body: none
   auth: inherit
-}
-
-params:query {
-  ~name: test
 }
 
 auth:apikey {

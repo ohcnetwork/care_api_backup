@@ -1,19 +1,19 @@
 meta {
-  name: Get all Organizations
+  name: Retrieve Organization
   type: http
-  seq: 1
+  seq: 4
 }
 
 get {
-  url: {{url}}/api/v1/organization/
+  url: {{url}}/api/v1/organization/f2fcf4a8-b120-4af7-a05d-8e384131c594/
   body: none
   auth: inherit
 }
 
 params:query {
-  ~parent: 
   ~org_type: govt
   ~name: test
+  ~parent: 
 }
 
 auth:apikey {
