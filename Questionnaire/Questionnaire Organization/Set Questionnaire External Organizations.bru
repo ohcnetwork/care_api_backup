@@ -1,0 +1,17 @@
+meta {
+  name: Set Questionnaire External Organizations
+  type: http
+  seq: 2
+}
+
+post {
+  url: {{url}}/api/v1/questionnaire/doctor-test/set_organizations/
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "organizations" : ["73508661-68eb-44bd-8939-323b1e4e7272"]
+  }
+}
