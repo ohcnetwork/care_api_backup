@@ -1,0 +1,20 @@
+meta {
+  name: Search Patients
+  type: http
+  seq: 4
+}
+
+post {
+  url: {{url}}/api/v1/patient/search/
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "name" : "dfgdf",
+    "year_of_birth" : "2001",
+    "phone_number" : "sdfsdfsd"
+    
+  }
+}

@@ -1,0 +1,26 @@
+meta {
+  name: Create Patient
+  type: http
+  seq: 3
+}
+
+post {
+  url: {{url}}/api/v1/patient/
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "name": "Dummy Patient 17",
+    "gender": "male",
+    "blood_group": "A_positive",
+    "phone_number": "+gfdgdfgdfg",
+    "address": "Test Patient Address",
+    "permanent_address" : "sdfsdfsd"
+    "date_of_birth": "2001-01-01",
+    "year_of_birth": 2001,
+    "pincode": 690506,
+    "geo_organization": "cd3dea79-25ed-4d3f-8e6f-1949fa20444d"
+  }
+}
