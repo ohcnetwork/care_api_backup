@@ -14,10 +14,5 @@ params:query {
   ~parent: 
   ~org_type: govt
   ~name: test
-}
-
-auth:apikey {
-  key: Authorization
-  value: {{auth}}
-  placement: header
+  ~permission: can_submit_questionnaire
 }

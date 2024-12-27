@@ -1,0 +1,33 @@
+meta {
+  name: Create Facility
+  type: http
+  seq: 4
+}
+
+post {
+  url: {{url}}/api/v1/facility/
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "name": "My New Facility",
+    "description": "string",
+    "ward": 5896,
+    "local_body": 95,
+    "district": 5,
+    "state": 1,
+    "facility_type": 1,
+    "address": "string",
+    "longitude": ".18480966087766",
+    "latitude": "131540.7843023",
+    "features": [
+      1
+    ],
+    "pincode": 690506,
+    "oxygen_capacity": 1,
+    "phone_number": "+913888009850",
+    "kasp_empanelled": true
+  }
+}

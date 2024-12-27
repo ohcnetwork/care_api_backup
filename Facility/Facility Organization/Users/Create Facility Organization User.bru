@@ -1,0 +1,18 @@
+meta {
+  name: Create Facility Organization User
+  type: http
+  seq: 2
+}
+
+post {
+  url: {{url}}/api/v1/facility/8e434d7f-dda7-4a20-9f2a-041b26e0e1fa/organizations/3667a622-b182-4b4c-afdb-b8718a2a9864/users/
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "user" : "2ce8496c-098c-4768-b83b-d376e1433eda",
+    "role" :"dceddb43-7a73-4717-8077-1ded26418f76"
+  }
+}
