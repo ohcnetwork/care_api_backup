@@ -1,0 +1,17 @@
+meta {
+  name: Add Encounter Organizations
+  type: http
+  seq: 6
+}
+
+post {
+  url: {{url}}/api/v1/encounter/3590e3f1-eaa7-42eb-b3b6-4ac4884eb894/organizations_add/
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "organization" : "f888dccb-90dd-4232-a4d4-8442df2137a3"
+  }
+}
