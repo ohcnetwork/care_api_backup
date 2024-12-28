@@ -1,0 +1,19 @@
+meta {
+  name: Retrieve Patients
+  type: http
+  seq: 5
+}
+
+post {
+  url: {{url}}/api/v1/patient/search_retrieve/
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "phone_number" : "+gfdgdfgdfg",
+    "year_of_birth" : 2001,
+    "partial_id" : "0bf73"
+  }
+}
