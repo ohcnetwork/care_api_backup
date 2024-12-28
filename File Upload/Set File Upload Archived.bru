@@ -1,0 +1,17 @@
+meta {
+  name: Set File Upload Archived
+  type: http
+  seq: 6
+}
+
+post {
+  url: {{url}}/api/v1/files/d29bea8e-0dd8-4529-a64c-3d83f130f3c1/archive/
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "archive_reason" : "Bad Read"
+  }
+}

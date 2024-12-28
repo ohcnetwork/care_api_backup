@@ -1,0 +1,25 @@
+meta {
+  name: List File Upload
+  type: http
+  seq: 4
+}
+
+get {
+  url: {{url}}/api/v1/files/?file_type=patient&associating_id=sdfgsd
+  body: json
+  auth: inherit
+}
+
+params:query {
+  file_type: patient
+  associating_id: sdfgsd
+}
+
+body:json {
+  {
+    "name" : "Test Document",
+    "file_type" : "patient",
+    "file_category" : "audio",
+    "associating_id" : "123"
+  }
+}

@@ -1,0 +1,21 @@
+meta {
+  name: Create File Upload
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{url}}/api/v1/files/
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "name" : "Test Document",
+    "file_type" : "patient",
+    "file_category" : "audio",
+    "original_name" : "sdfsdfsdf.jpeg",
+    "associating_id" : "123"
+  }
+}
