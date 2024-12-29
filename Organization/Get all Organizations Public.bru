@@ -1,0 +1,18 @@
+meta {
+  name: Get all Organizations Public
+  type: http
+  seq: 5
+}
+
+get {
+  url: {{url}}/api/v1/govt/organization
+  body: none
+  auth: inherit
+}
+
+params:query {
+  ~parent: 
+  ~org_type: govt
+  ~name: test
+  ~permission: can_submit_questionnaire
+}

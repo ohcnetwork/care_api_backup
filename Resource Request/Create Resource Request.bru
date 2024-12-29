@@ -1,0 +1,23 @@
+meta {
+  name: Create Resource Request
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{url}}/api/v1/resource/
+  body: json
+  auth: inherit
+}
+
+body:json {
+  { 
+    "origin_facility": "25d28a44-f872-459e-8675-f22ed632b231",
+    "emergency" : true,
+    "title" : "Tertret",
+    "description" : "sdfsdfsdf",
+    "reason" : "sdfsdfs",
+    "referring_facility_contact_name" : "sdfgsdgd",
+    "referring_facility_contact_number" : "+914352854643"
+  }
+}
