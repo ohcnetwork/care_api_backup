@@ -5,11 +5,12 @@ meta {
 }
 
 get {
-  url: {{url}}/api/v1/encounter/
+  url: {{url}}/api/v1/encounter/?patient=0bf731de-eeec-41b1-a5c7-b29638803823
   body: none
   auth: inherit
 }
 
 params:query {
-  : 
+  patient: 0bf731de-eeec-41b1-a5c7-b29638803823
+  ~facility: 8e434d7f-dda7-4a20-9f2a-041b26e0e1fa
 }

@@ -1,0 +1,18 @@
+meta {
+  name: Add User
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{url}}/api/v1/patient/0bf731de-eeec-41b1-a5c7-b29638803823/add_user/
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "user" : "2ce8496c-098c-4768-b83b-d376e1433eda",
+    "role" :"dceddb43-7a73-4717-8077-1ded26418f76"
+  }
+}
