@@ -1,0 +1,30 @@
+meta {
+  name: Create Patient
+  type: http
+  seq: 4
+}
+
+post {
+  url: {{url}}/api/v1/otp/patient/
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoicGF0aWVudF9sb2dpbiIsImV4cCI6MTczNTU0ODM2MywiaWF0IjoxNzM1NTQ0NzYzLCJqdGkiOiJjZDgyMTQ1MTI5ZDc0YzJhOWNjMDVkZjZkNmU1YmE3NSIsInBob25lX251bWJlciI6Iis5MTkyNDMwODM4MTcifQ.3JHuYnNX0iVX2ydx95Ck1_f9XzdFwQQroLiCMrlE154
+}
+
+body:json {
+  {
+        "name": "Dummy Patient 17",
+        "gender": "male",
+        "phone_number": "+gfdgdfgdfg",
+        "address": "Test Patient Address",
+        "age": 24,
+        "state" : 1,
+        "district" : 7,
+        "local_body" : 6,
+        "pincode" : 690506,
+    "geo_organization": "cd3dea79-25ed-4d3f-8e6f-1949fa20444d"
+      }
+}
