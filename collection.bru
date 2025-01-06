@@ -3,10 +3,72 @@ meta {
 }
 
 auth {
-  mode: basic
+  mode: bearer
 }
 
-auth:basic {
-  username: {{username}}
-  password: {{password}}
+auth:bearer {
+  token: {{access_token}}
+}
+
+script:pre-request {
+  if(req.getAuthMode() === "bearer"){
+    const EXPIRES_IN_MINS = 5;
+    const REFRESH_WINDOW_MINS = 20;
+    const validTill = Number(bru.getEnvVar("valid_till")) || 0;
+    const access = bru.getEnvVar("access_token") || "";
+    const refresh = bru.getEnvVar("refresh_token") || "";
+    const currentTime = new Date().getTime();
+  
+    console.log("Valid till", new Date(validTill))
+  
+    let valid = access && validTill > 0;
+    if(valid) {
+      valid = currentTime < validTill;
+    }
+  
+    const canUseRefresh = refresh && 
+      validTill > 0 && 
+      currentTime < (validTill + REFRESH_WINDOW_MINS * 60 * 1000);
+    
+    if (!valid) {
+      const axios = require('axios');
+      const baseUrl = bru.getEnvVar("url");
+      const axiosInstance = axios.create({
+        baseURL: baseUrl,
+      });
+  
+      if (canUseRefresh) {
+        console.log("Token Expired; Using refresh token")
+        const response = await axiosInstance.post('/api/v1/auth/token/refresh/', {
+          refresh: refresh
+        }).catch(error => {
+          console.error('Refresh token failed:', error);
+        });
+  
+        if (response && response.data && response.data.access) {
+          await bru.setEnvVar("access_token", response.data.access);
+          await bru.setEnvVar("valid_till", currentTime + EXPIRES_IN_MINS*60*1000);
+          return;
+        }
+      }
+  
+      console.log("Getting new Access Token")
+      const response = await axiosInstance.post('/api/v1/auth/login/', {
+        username: bru.getEnvVar("username"),
+        password: bru.getEnvVar("password")
+      }).catch(error => {
+        console.error('Authentication failed:', error);
+      });
+  
+      if (response && response.data && response.data.access) {
+        await bru.setEnvVar("access_token", response.data.access);
+        await bru.setEnvVar("refresh_token", response.data.refresh);
+        await bru.setEnvVar("valid_till", currentTime + EXPIRES_IN_MINS*60*1000);
+      } else {
+        console.error('Failed to retrieve access token', JSON.stringify(response.data));
+      }
+    } else {
+      console.log("Using Access Token from env")
+    }
+  }
 }
