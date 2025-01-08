@@ -5,9 +5,13 @@ meta {
 }
 
 get {
-  url: {{url}}/api/v1/questionnaire/
+  url: {{url}}/api/v1/questionnaire/?tag_slug=4a27f22a-04dc-4b39-b688-4b4f0c9b62d5
   body: none
   auth: inherit
+}
+
+params:query {
+  tag_slug: 4a27f22a-04dc-4b39-b688-4b4f0c9b62d5
 }
 
 auth:apikey {

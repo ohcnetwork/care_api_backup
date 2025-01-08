@@ -1,0 +1,20 @@
+meta {
+  name: List Tags
+  type: http
+  seq: 3
+}
+
+get {
+  url: {{url}}/api/v1/questionnaire_tag/?slug=t&name=t
+  body: json
+  auth: inherit
+}
+
+params:query {
+  slug: t
+  name: t
+}
+
+body:json {
+  {"name" : "Test Tag 1" , "slug" : "test_there"}
+}

@@ -1,0 +1,15 @@
+meta {
+  name: Update Tag
+  type: http
+  seq: 2
+}
+
+put {
+  url: {{url}}/api/v1/questionnaire_tag/test_there/
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {"name" : "Test Tag 1" , "slug" : "test_there"}
+}

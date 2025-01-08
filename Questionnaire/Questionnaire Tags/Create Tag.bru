@@ -1,0 +1,15 @@
+meta {
+  name: Create Tag
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{url}}/api/v1/questionnaire_tag/
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {"name" : "Test Tag" , "slug" : "test_there"}
+}

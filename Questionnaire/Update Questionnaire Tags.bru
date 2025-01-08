@@ -1,0 +1,27 @@
+meta {
+  name: Update Questionnaire Tags
+  type: http
+  seq: 13
+}
+
+post {
+  url: {{url}}/api/v1/questionnaire/doctor-test2/set_tags/
+  body: json
+  auth: inherit
+}
+
+auth:apikey {
+  key: Authorization
+  value: {{auth}}
+  placement: header
+}
+
+body:json {
+  {
+     "tags" : ["test_there"]
+  }
+}
+
+docs {
+  Creates a new Questionnaire
+}
