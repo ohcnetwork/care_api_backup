@@ -3,15 +3,16 @@ meta {
 }
 
 auth {
-  mode: bearer
+  mode: basic
 }
 
-auth:bearer {
-  token: {{access_token}}
+auth:basic {
+  username: {{username}}
+  password: {{password}}
 }
 
 script:pre-request {
-  if(req.getAuthMode() === "bearer"){
+  if(req.getAuthMode() === "bearer" && bru.getEnvVar("use_password_auth")){
     const EXPIRES_IN_MINS = 5;
     const REFRESH_WINDOW_MINS = 20;
     const validTill = Number(bru.getEnvVar("valid_till")) || 0;
