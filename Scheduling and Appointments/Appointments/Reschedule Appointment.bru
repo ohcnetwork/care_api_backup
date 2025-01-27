@@ -1,0 +1,20 @@
+meta {
+  name: Reschedule Appointment
+  type: http
+  seq: 4
+}
+
+post {
+  url: {{url}}/api/v1/facility/:facility_id/appointments/:booking_id/reschedule/
+  body: json
+  auth: inherit
+}
+
+params:path {
+  booking_id: 839e6786-f24e-48af-9d21-435d899f8b65
+  facility_id: c211b67a-fde6-44b1-9586-799656c584d1
+}
+
+body:json {
+  {"new_slot" : "8424dcf4-0b4d-4852-927c-4686b6708a32"}
+}
