@@ -1,0 +1,25 @@
+meta {
+  name: Location Encounter Create
+  type: http
+  seq: 4
+}
+
+post {
+  url: {{url}}/api/v1/facility/:facility_id/location/:location_id/association/
+  body: json
+  auth: inherit
+}
+
+params:path {
+  location_id: 43e5c32e-aeb7-4a7a-8e43-c0f08fe59178
+  facility_id: 44113366-0f76-483e-9e5a-ca9ae80072f7
+}
+
+body:json {
+  {
+    "status" : "active",
+    "encounter" : "ed2838e0-4103-430a-b294-8a8eee59eb13",
+    "start_datetime" : "2025-01-27T17:59:57.900228Z",
+    "end_datetime" : "2025-01-27T18:59:57.900228Z"
+  }
+}

@@ -1,0 +1,23 @@
+meta {
+  name: Location Encounter Update
+  type: http
+  seq: 5
+}
+
+put {
+  url: {{url}}/api/v1/facility/:facility_id/location/:location_id/association/e77c08e0-6cad-4143-b241-e909c6aa13c3/
+  body: json
+  auth: inherit
+}
+
+params:path {
+  location_id: 43e5c32e-aeb7-4a7a-8e43-c0f08fe59178
+  facility_id: 44113366-0f76-483e-9e5a-ca9ae80072f7
+}
+
+body:json {
+  {
+    "status" : "active",
+    "start_datetime" : "2025-01-30T17:50:57.900228Z"
+  }
+}

@@ -1,0 +1,28 @@
+meta {
+  name: List Locations
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{url}}/api/v1/facility/:facility_id/location/
+  body: json
+  auth: inherit
+}
+
+params:path {
+  facility_id: 44113366-0f76-483e-9e5a-ca9ae80072f7
+}
+
+body:json {
+  {
+    "name" : "test location",
+    "operational_status" : "C",
+    "status" : "active",
+    "description" : "sdfsdf",
+    "form" : "bu",
+    "parent" : null,
+    "organizations" : [],
+    "mode" : "instance"
+  }
+}
