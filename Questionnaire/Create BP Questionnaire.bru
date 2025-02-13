@@ -19,11 +19,11 @@ auth:apikey {
 body:json {
   {
       "title": "test",
-      "slug" : "doctor-test2",
+      "slug" : "doctor-test123",
       "description": "test",
       "status": "active",
-      "subject_type": "patient",
-      "organizations" : ["ff6f2f02-c678-4fb0-bdab-8f9c0dd17d7c"],
+      "subject_type": "encounter",
+      "organizations" : ["510330f6-4f98-4770-8d46-c117170a0853"],
       "questions": [
           {
               "styling_metadata": {
@@ -46,7 +46,14 @@ body:json {
                           "display": "Systolic blood pressure",
                           "system": "http://loinc.org",
                           "code": "8480-6"
-                      }
+                      },
+                    "unit": {
+                  "code": "[degF]",
+                  "system": "http://unitsofmeasure.org",
+                  "display": "degrees Fahrenheit"
+                },
+                                        "required" : true
+  
                   },
                   {
                       "link_id": "12345",
@@ -56,7 +63,9 @@ body:json {
                           "display": "Diastolic blood pressure",
                           "system": "http://loinc.org",
                           "code": "8462-4"
-                      }
+                      },
+                                        "required" : true
+  
                   }
               ]
           }

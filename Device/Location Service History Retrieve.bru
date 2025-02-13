@@ -1,0 +1,22 @@
+meta {
+  name: Location Service History Retrieve
+  type: http
+  seq: 10
+}
+
+get {
+  url: {{url}}/api/v1/facility/:facility_id/device/:device_id/service_history/abb917f0-894a-4ee4-a2d0-0f85f73a54e6/
+  body: none
+  auth: inherit
+}
+
+params:path {
+  device_id: 614514be-f394-4816-a56c-3bf83acda0df
+  facility_id: 44113366-0f76-483e-9e5a-ca9ae80072f7
+}
+
+body:json {
+  {
+    "encounter" : "ed2838e0-4103-430a-b294-8a8eee59eb13"
+  }
+}

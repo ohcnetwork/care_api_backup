@@ -5,9 +5,13 @@ meta {
 }
 
 post {
-  url: {{url}}/api/v1/patient/dac698c4-4974-4ccb-9427-aef65bb5f17d/medication/request/
+  url: {{url}}/api/v1/patient/:patient_id/medication/request/
   body: json
   auth: inherit
+}
+
+params:path {
+  patient_id: ad9e0d68-7605-4b6a-a9bc-5b54829171a2
 }
 
 auth:apikey {
@@ -18,7 +22,7 @@ auth:apikey {
 
 body:json {
   {
-    "status": "active",
+    "status": "entered_in_error",
     "intent": "plan",
     "category": "inpatient",
     "priority": "urgent",
@@ -29,6 +33,7 @@ body:json {
       "code": "90332006"
     },
     "dosage_instruction": [],
-    "encounter": "8d0f196c-61ec-4099-8a5b-b29f8233c80a"
+    "encounter": "ed2838e0-4103-430a-b294-8a8eee59eb13",
+    "authored_on": "2025-01-27T18:35:29.284350Z" 
   }
 }

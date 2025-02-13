@@ -1,0 +1,23 @@
+meta {
+  name: Create Device
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{url}}/api/v1/facility/:facility_id/device/
+  body: json
+  auth: inherit
+}
+
+params:path {
+  facility_id: 44113366-0f76-483e-9e5a-ca9ae80072f7
+}
+
+body:json {
+  {
+    "status" : "active",
+    "availability_status" : "available",
+    "registered_name" : "Test 123"
+  }
+}

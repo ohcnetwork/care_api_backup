@@ -5,7 +5,7 @@ meta {
 }
 
 post {
-  url: {{url}}/api/v1/questionnaire/vignesh-test/submit/
+  url: {{url}}/api/v1/questionnaire/doctor-test123/submit/
   body: json
   auth: inherit
 }
@@ -18,26 +18,19 @@ auth:apikey {
 
 body:json {
   {
-  	"resource_id": "0f9552bd-1498-4b92-8f62-a83ad6f493b6",
-  	"encounter": "40faecc6-6599-48cd-bc2a-dd9e73b920f9",
-  	"results": [
-  		{
-  			"question_id": "cbf59886-dcad-4750-8c83-03e84265a495",
-  			"values": [
-  				{
-  					"value": "123"
-  				}
-  			]
-  		},
-  		{
-  			"question_id": "f874f6cb-984d-4e8f-baee-b164d947420c",
-  			"values": [
-  				{
-  					"value": "123"
-  				}
-  			]
-  		}
-  	]
+    "resource_id": "ad9e0d68-7605-4b6a-a9bc-5b54829171a2",
+    "encounter": "ed2838e0-4103-430a-b294-8a8eee59eb13",
+    "patient" :  "ad9e0d68-7605-4b6a-a9bc-5b54829171a2",
+    "results": [
+      {
+        "question_id": "f725f54b-6fa0-45a3-8af2-165924407456",
+        "values":  [ {"value" :  "123"} ]
+      },
+      {
+        "question_id": "680966c2-4587-4c99-a800-85f6148f8531",
+        "values": [ {"value" :  "123"} ]
+      }
+    ]
   }
 }
 

@@ -1,16 +1,17 @@
 meta {
-  name: Create Location
+  name: Update Location
   type: http
-  seq: 1
+  seq: 7
 }
 
-post {
-  url: {{url}}/api/v1/facility/:facility_id/location/
+put {
+  url: {{url}}/api/v1/facility/:facility_id/location/:location_id/
   body: json
   auth: inherit
 }
 
 params:path {
+  location_id: 43e5c32e-aeb7-4a7a-8e43-c0f08fe59178
   facility_id: 44113366-0f76-483e-9e5a-ca9ae80072f7
 }
 
@@ -23,7 +24,6 @@ body:json {
     "form" : "bu",
     "parent" : null,
     "organizations" : [],
-    "mode" : "kind",
-    "parent" : "43e5c32e-aeb7-4a7a-8e43-c0f08fe59178"
+    "mode" : "kind"
   }
 }

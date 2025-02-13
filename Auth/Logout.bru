@@ -1,0 +1,22 @@
+meta {
+  name: Logout
+  type: http
+  seq: 2
+}
+
+post {
+  url: {{url}}/api/v1/auth/logout/
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzM4NzU3MDY5LCJpYXQiOjE3Mzg3NTY0NjksImp0aSI6ImExOTA2MGY3MTNkOTRjMDc5ODRlZmRhYjM4Y2UzMDE3IiwidXNlcl9pZCI6Ijc4YzZiZGMyLWI2YmQtNGY4Ny05ZGQwLTI5NzI3Zjg3OTQ2ZCJ9.3H0On3Q8aq2p6jUDRKJ2HY-UQjzRM-CkbA-W1-y6pIA
+}
+
+body:json {
+  {
+    "access" : "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzM4NzU3MDY5LCJpYXQiOjE3Mzg3NTY0NjksImp0aSI6ImExOTA2MGY3MTNkOTRjMDc5ODRlZmRhYjM4Y2UzMDE3IiwidXNlcl9pZCI6Ijc4YzZiZGMyLWI2YmQtNGY4Ny05ZGQwLTI5NzI3Zjg3OTQ2ZCJ9.3H0On3Q8aq2p6jUDRKJ2HY-UQjzRM-CkbA-W1-y6pIA",
+    "refresh" : "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTczODc1ODI2OSwiaWF0IjoxNzM4NzU2NDY5LCJqdGkiOiI1YTBlYWE1MThlMjg0NTVhYTc4MmQxYzRkNjIzNDVmZSIsInVzZXJfaWQiOiI3OGM2YmRjMi1iNmJkLTRmODctOWRkMC0yOTcyN2Y4Nzk0NmQifQ.pBVuPnz8OjpQcEFcU6CIZE5YI8ry-UXoFi-3icx2y-w"
+  }
+}

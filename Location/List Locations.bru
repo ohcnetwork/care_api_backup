@@ -5,9 +5,13 @@ meta {
 }
 
 get {
-  url: {{url}}/api/v1/facility/:facility_id/location/
+  url: {{url}}/api/v1/facility/:facility_id/location/?name=test
   body: json
   auth: inherit
+}
+
+params:query {
+  name: test
 }
 
 params:path {
