@@ -1,0 +1,22 @@
+meta {
+  name: Create Specimen Definition
+  type: http
+  seq: 2
+}
+
+post {
+  url: {{url}}/api/v1/facility/60d4f3b1-6392-4c0f-bba1-f987c450f3bc/specimen_definition/
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "slug" : "test",
+    "title" : "testing here",
+    "status" : "active",
+    "category" : "imaging",
+    "permitted_data_type" : "boolean"
+    
+  }
+}
