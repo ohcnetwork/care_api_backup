@@ -1,0 +1,28 @@
+meta {
+  name: Create Observation Definition
+  type: http
+  seq: 2
+}
+
+post {
+  url: {{url}}/api/v1/observation_definition/
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "slug" : "test",
+    "title" : "testing here",
+    "status" : "active",
+    "description" : "sdfdsfsdf",
+  "code": {
+                  "display": "Blood pressure",
+                  "system": "http://loinc.org",
+                  "code": "LP40259-1"
+              },
+    "category" : "imaging",
+    "permitted_data_type" : "boolean"
+    
+  }
+}

@@ -1,0 +1,32 @@
+meta {
+  name: Care Team Upsert
+  type: http
+  seq: 8
+}
+
+post {
+  url: {{url}}/api/v1/encounter/ed2838e0-4103-430a-b294-8a8eee59eb13/set_care_team_members/
+  body: json
+  auth: inherit
+}
+
+auth:apikey {
+  key: Authorization
+  value: {{auth}}
+  placement: header
+}
+
+body:json {
+  {
+    "members": [
+      {
+        "user_id": "78c6bdc2-b6bd-4f87-9dd0-29727f87946d",
+        "role": {
+          "system" : "http://snomed.info/sct",
+          "code": "1586771000168103",
+          "display": "Acupuncturist"
+        }
+      }
+    ]
+  }
+}
