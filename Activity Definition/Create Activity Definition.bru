@@ -1,0 +1,30 @@
+meta {
+  name: Create Activity Definition
+  type: http
+  seq: 2
+}
+
+post {
+  url: {{url}}/api/v1/facility/60d4f3b1-6392-4c0f-bba1-f987c450f3bc/activity_definition/
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "slug" : "test2sdf",
+    "title" : "testing heredfgdfgdfgdf",
+    "status" : "active",
+    "category" : "imaging",
+    "permitted_data_type" : "boolean",
+    "description" : "sdfsd",
+    "category" : "laboratory",
+    "kind" : "service_request",
+    "code" : {
+        "display": "Fluordgfgdfgdfgflimb with contrast",
+        "system": "http://snomed.info/sct",
+        "code": "997199941000119102"},
+    "specimen_requirements" : [],
+    "observation_result_requirements" : []
+  }
+}

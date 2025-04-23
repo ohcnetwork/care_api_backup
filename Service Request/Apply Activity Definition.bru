@@ -1,0 +1,20 @@
+meta {
+  name: Apply Activity Definition
+  type: http
+  seq: 5
+}
+
+post {
+  url: {{url}}/api/v1/facility/60d4f3b1-6392-4c0f-bba1-f987c450f3bc/service_request/apply_activity_definition/
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "activity_definition" : "2f8cd337-e784-43c1-89bc-98979fbaadb0",
+    "service_request" : {
+  },
+    "encounter" : "169a0cde-0667-4e15-9950-16163b1f2b9b"
+  }
+}

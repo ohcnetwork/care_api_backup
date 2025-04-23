@@ -1,0 +1,23 @@
+meta {
+  name: Expand Healthcare service type Valueset
+  type: http
+  seq: 13
+}
+
+post {
+  url: {{url}}/api/v1/valueset/healthcare-service-type-code/expand/
+  body: json
+  auth: inherit
+}
+
+auth:apikey {
+  key: Authorization
+  value: {{auth}}
+  placement: header
+}
+
+body:json {
+  {
+      "search" : "h"
+  }
+}

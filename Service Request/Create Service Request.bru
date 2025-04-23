@@ -1,0 +1,26 @@
+meta {
+  name: Create Service Request
+  type: http
+  seq: 2
+}
+
+post {
+  url: {{url}}/api/v1/facility/60d4f3b1-6392-4c0f-bba1-f987c450f3bc/service_request/
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "title" : "testing here",
+    "status" : "active",
+    "category" : "imaging",
+    "priority" : "stat",
+    "intent" : "proposal",
+    "code" : {
+        "display": "Fluoroscopic venography of left limb with contrast",
+        "system": "http://snomed.info/sct",
+        "code": "997199941000119102"},
+    "encounter" : "169a0cde-0667-4e15-9950-16163b1f2b9b"
+  }
+}
