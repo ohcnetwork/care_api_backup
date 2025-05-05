@@ -1,0 +1,21 @@
+meta {
+  name: Create Account
+  type: http
+  seq: 2
+}
+
+post {
+  url: {{url}}/api/v1/facility/60d4f3b1-6392-4c0f-bba1-f987c450f3bc/account/
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "status" : "active",
+    "billing_status" : "open",
+    "name" : "active",
+    "patient": "ad9e0d68-7605-4b6a-a9bc-5b54829171a2",
+    "service_period" : {}
+  }
+}

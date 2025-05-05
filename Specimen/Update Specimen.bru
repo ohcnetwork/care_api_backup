@@ -1,0 +1,38 @@
+meta {
+  name: Update Specimen
+  type: http
+  seq: 2
+}
+
+put {
+  url: {{url}}/api/v1/facility/60d4f3b1-6392-4c0f-bba1-f987c450f3bc/specimen/16ad0b62-fc06-4500-8e73-4859c1b59669/
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "accession_identifier": "",
+    "status": "available",
+    "specimen_type": {
+      "code": "BLD",
+      "system": "http://terminology.hl7.org/CodeSystem/v2-0487",
+      "display": "Whole blood"
+    },
+    "received_time": null,
+    "collection": null,
+    "processing": [
+      {
+        "description": "asdasd Specimen examination by more than one examiner",
+        "method": {
+          "code": "866036006",
+          "display": "Specimen examination by more than one examiner",
+          "system": "http://snomed.info/sct"
+        },
+        "time_date_time": "2025-04-25T21:49:37.770Z"
+      }
+    ],
+    "condition": [],
+    "note": "sdgsdgf"
+  }
+}

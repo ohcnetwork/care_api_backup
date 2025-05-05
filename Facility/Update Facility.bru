@@ -1,0 +1,60 @@
+meta {
+  name: Update Facility
+  type: http
+  seq: 7
+}
+
+put {
+  url: {{url}}/api/v1/facility/60d4f3b1-6392-4c0f-bba1-f987c450f3bc/
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "name": "My New Facility",
+    "description": "string",
+    "longitude": "0.1848096608776600",
+    "latitude": "131540.7843022999877576",
+    "pincode": 690506,
+    "address": "string",
+    "phone_number": "+913888009850",
+    "middleware_address": null,
+    "facility_type": "Private Hospital",
+    "is_public": false,
+    "cover_image_url": null,
+    "read_cover_image_url": null,
+    "geo_organization": "510330f6-4f98-4770-8d46-c117170a0853",
+    "features": [
+      1
+    ],
+    "discount_codes": [
+      {
+        "code": "oldagea",
+        "display": "Old Age Discount",
+        "system": "http://ohc.network/codes/monetory/discount"
+      }
+    ],
+    "discount_monetory_components": [
+      {
+        "title" :"sdfsdf",
+        "code": {
+          "code": "oldage",
+          "display": "Old Age Discount",
+          "system": "http://ohc.network/codes/monetory/discount"
+        },
+        "monetory_component_type": "discount",
+        "factor": 10
+      },
+      {
+        "code": {
+          "code": "child",
+          "display": "Child Discount",
+          "system": "http://ohc.network/codes/monetory/discount"
+        },
+        "monetory_component_type": "discount",
+        "factor": 10
+      }
+    ]
+  }
+}

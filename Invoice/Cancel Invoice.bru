@@ -1,0 +1,11 @@
+meta {
+  name: Cancel Invoice
+  type: http
+  seq: 5
+}
+
+post {
+  url: {{url}}/api/v1/facility/60d4f3b1-6392-4c0f-bba1-f987c450f3bc/invoice/b1fe174f-fb94-4d9e-853b-7892c99a329f/cancel_invoice/
+  body: json
+  auth: inherit
+}

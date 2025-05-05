@@ -1,0 +1,23 @@
+meta {
+  name: Create Specimen
+  type: http
+  seq: 7
+}
+
+post {
+  url: {{url}}/api/v1/facility/60d4f3b1-6392-4c0f-bba1-f987c450f3bc/service_request/b56846fc-6a99-4803-bbc6-2d271bae2471/create_specimen/
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "status" : "available",
+    "accession_identifier" : "sdfsdf",
+    "specimen_type" : {
+            "code": "ABS",
+            "system": "http://terminology.hl7.org/CodeSystem/v2-0487",
+            "display": "Abscess"
+          }
+  }
+}

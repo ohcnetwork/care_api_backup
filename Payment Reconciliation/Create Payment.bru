@@ -1,0 +1,27 @@
+meta {
+  name: Create Payment
+  type: http
+  seq: 2
+}
+
+post {
+  url: {{url}}/api/v1/facility/60d4f3b1-6392-4c0f-bba1-f987c450f3bc/payment_reconciliation/
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "title": "testing here",
+    "status": "active",
+    "reconciliation_type": "payment",
+    "kind": "deposit",
+    "issuer_type" : "patient",
+    "outcome" : "complete",
+    "method" : "cash",
+    "tendered_amount" : 100,
+    "returned_amount" : 0,
+    "target_invoice": "1220686e-edce-499f-8332-6664cc3b8a41",
+    "account" : "cb202388-cba0-46b7-a8c3-5209d06b773a"
+  }
+}

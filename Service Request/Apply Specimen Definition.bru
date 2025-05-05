@@ -1,0 +1,19 @@
+meta {
+  name: Apply Specimen Definition
+  type: http
+  seq: 6
+}
+
+post {
+  url: {{url}}/api/v1/facility/60d4f3b1-6392-4c0f-bba1-f987c450f3bc/service_request/b56846fc-6a99-4803-bbc6-2d271bae2471/create_specimen_from_definition/
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "specimen_definition" : "8545154a-3bcd-4232-87e9-1ce5b04d5d0d",
+    "specimen" : {
+  }
+  }
+}

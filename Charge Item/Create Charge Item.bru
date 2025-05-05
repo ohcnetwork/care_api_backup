@@ -1,0 +1,40 @@
+meta {
+  name: Create Charge Item
+  type: http
+  seq: 4
+}
+
+post {
+  url: {{url}}/api/v1/facility/60d4f3b1-6392-4c0f-bba1-f987c450f3bc/charge_item/
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "status" : "billable",
+    "title" : "sdfsdf",
+    "quantity" : 2,
+    "encounter" : "ed2838e0-4103-430a-b294-8a8eee59eb13",
+    "unit_price_components" : [{
+      "monetory_component_type" : "base",
+      "amount" : 100
+    },
+                               {
+      "monetory_component_type" : "surcharge",
+      "factor" : 10
+    },
+                               {
+      "monetory_component_type" : "discount",
+      "factor" : 10
+    },{
+      "monetory_component_type" : "tax",
+      "factor" : 10
+    },
+                              {
+      "monetory_component_type" : "tax",
+      "factor" : 10
+    }]
+                              
+  }
+}

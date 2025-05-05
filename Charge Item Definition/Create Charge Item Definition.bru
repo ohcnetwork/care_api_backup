@@ -1,0 +1,25 @@
+meta {
+  name: Create Charge Item Definition
+  type: http
+  seq: 2
+}
+
+post {
+  url: {{url}}/api/v1/facility/60d4f3b1-6392-4c0f-bba1-f987c450f3bc/charge_item_definition/
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "slug" : "testsdf1",
+    "title" : "testing here",
+    "status" : "active",
+    "category" : "imaging",
+    "description" : "sdfsd",
+    "price_component" : [{
+      "monetory_component_type" : "base",
+      "factor" : 10
+    }]
+  }
+}

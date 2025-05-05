@@ -1,0 +1,32 @@
+meta {
+  name: Update Observation
+  type: http
+  seq: 6
+}
+
+post {
+  url: {{url}}/api/v1/facility/60d4f3b1-6392-4c0f-bba1-f987c450f3bc/diagnostic_report/02050ea8-b368-4ad4-9fcf-8c9590782538/upsert_observations/
+  body: json
+  auth: inherit
+}
+
+body:json {
+  
+  
+  
+  {
+    "observations": [
+      {
+        "observation_id": "3cdfccca-0df2-4acd-9ecc-ee0bc93aa315",
+        "observation": {
+          "status": "final",
+          "subject_type": "encounter",
+          "effective_datetime": "2025-03-07T13:40:03.555503Z",
+          "value_type": "boolean",
+          "value": {
+            "value": "true"
+          }
+        }}
+      ]
+    }
+}
