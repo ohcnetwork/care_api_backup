@@ -1,0 +1,17 @@
+meta {
+  name: Update Supply Delivery
+  type: http
+  seq: 4
+}
+
+put {
+  url: {{url}}/api/v1/supply_delivery/0b082a76-a468-4c13-8a3b-fe182542e526/
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "status" : "completed"
+  }
+}

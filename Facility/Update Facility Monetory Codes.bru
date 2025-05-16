@@ -1,33 +1,17 @@
 meta {
-  name: Update Facility
+  name: Update Facility Monetory Codes
   type: http
-  seq: 7
+  seq: 8
 }
 
-put {
-  url: {{url}}/api/v1/facility/60d4f3b1-6392-4c0f-bba1-f987c450f3bc/
+post {
+  url: {{url}}/api/v1/facility/60d4f3b1-6392-4c0f-bba1-f987c450f3bc/set_monetary_codes/
   body: json
   auth: inherit
 }
 
 body:json {
   {
-    "name": "My New Facility",
-    "description": "string",
-    "longitude": "0.1848096608776600",
-    "latitude": "131540.7843022999877576",
-    "pincode": 690506,
-    "address": "string",
-    "phone_number": "+913888009850",
-    "middleware_address": null,
-    "facility_type": "Private Hospital",
-    "is_public": false,
-    "cover_image_url": null,
-    "read_cover_image_url": null,
-    "geo_organization": "510330f6-4f98-4770-8d46-c117170a0853",
-    "features": [
-      1
-    ],
     "discount_codes": [
       {
         "code": "oldageadfgvdfv",
@@ -47,6 +31,7 @@ body:json {
         "factor": 10
       },
       {
+        "title" : "sdfsd",
         "code": {
           "code": "child",
           "display": "Child Discount",

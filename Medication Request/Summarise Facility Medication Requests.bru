@@ -1,0 +1,25 @@
+meta {
+  name: Summarise Facility Medication Requests
+  type: http
+  seq: 4
+}
+
+get {
+  url: {{url}}/api/v1/facility/:facility_id/medication_request/summary/
+  body: none
+  auth: inherit
+}
+
+params:query {
+  ~priority: routine
+}
+
+params:path {
+  facility_id: 60d4f3b1-6392-4c0f-bba1-f987c450f3bc
+}
+
+auth:apikey {
+  key: Authorization
+  value: {{auth}}
+  placement: header
+}

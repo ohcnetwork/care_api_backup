@@ -16,25 +16,70 @@ body:json {
     "title" : "sdfsdf",
     "quantity" : 2,
     "encounter" : "ed2838e0-4103-430a-b294-8a8eee59eb13",
-    "unit_price_components" : [{
-      "monetory_component_type" : "base",
-      "amount" : 100
-    },
-                               {
-      "monetory_component_type" : "surcharge",
-      "factor" : 10
-    },
-                               {
-      "monetory_component_type" : "discount",
-      "factor" : 10
-    },{
-      "monetory_component_type" : "tax",
-      "factor" : 10
-    },
-                              {
-      "monetory_component_type" : "tax",
-      "factor" : 10
-    }]
+    "unit_price_components" : [
+      {
+          "amount": 100,
+          "monetary_component_type": "base"
+      },
+      {
+          "code": {
+              "code": "child",
+              "system": "http://ohc.network/codes/monetory/discount",
+              "display": "Child Discount"
+          },
+          "factor": 0.1,
+          "monetary_component_type": "discount"
+      },
+      {
+          "code": {
+              "code": "student",
+              "system": "http://ohc.network/codes/monetory/discount",
+              "display": "Student Discount"
+          },
+          "factor": 0.1,
+          "monetary_component_type": "discount"
+      },
+      {
+          "code": {
+              "code": "sgst",
+              "system": "http://ohc.network/codes/monetory/tax",
+              "display": "SGST"
+          },
+          "factor": 0.18,
+          "monetary_component_type": "tax"
+      },
+      {
+          "code": {
+              "code": "gst",
+              "system": "http://ohc.network/codes/monetory/tax",
+              "display": "GST"
+          },
+          "factor": 0.18,
+          "monetary_component_type": "tax"
+      },
+      {
+          "code": {
+              "code": "igst",
+              "system": "http://ohc.network/codes/monetory/tax",
+              "display": "IGST"
+          },
+          "factor": 0.18,
+          "monetary_component_type": "tax"
+      },
+      {
+          "code": {
+              "code": "oldage",
+              "system": "http://ohc.network/codes/monetory/discount",
+              "display": "Old Age Discount"
+          },
+          "factor": 0.1,
+          "monetary_component_type": "discount"
+      },
+      {
+          "amount": 10,
+          "monetary_component_type": "surcharge"
+      }
+  ]
                               
   }
 }

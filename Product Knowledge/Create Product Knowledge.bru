@@ -1,0 +1,21 @@
+meta {
+  name: Create Product Knowledge
+  type: http
+  seq: 2
+}
+
+post {
+  url: {{url}}/api/v1/product_knowledge/
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "slug" : "sdfsd",
+    "status" : "active",
+    "product_type"  : "medication",
+    "name" : "test",
+    "facility" : "60d4f3b1-6392-4c0f-bba1-f987c450f3bc"
+  }
+}

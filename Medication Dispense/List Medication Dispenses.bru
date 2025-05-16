@@ -1,17 +1,17 @@
 meta {
-  name: List Medication Requests
+  name: List Medication Dispenses
   type: http
   seq: 1
 }
 
 get {
-  url: {{url}}/api/v1/patient/:patient_id/medication/request/?status=active,entered_in_error
+  url: {{url}}/api/v1/patient/:patient_id/medication/dispense/
   body: none
   auth: inherit
 }
 
 params:query {
-  status: active,entered_in_error
+  ~status: entered_in_error
 }
 
 params:path {

@@ -1,0 +1,32 @@
+meta {
+  name: Medication Dispense Create
+  type: http
+  seq: 2
+}
+
+post {
+  url: {{url}}/api/v1/patient/:patient_id/medication/dispense/
+  body: json
+  auth: inherit
+}
+
+params:path {
+  patient_id: bcdd6773-c9a1-44e4-9cd6-968ad2f6aa3c
+}
+
+auth:apikey {
+  key: Authorization
+  value: {{auth}}
+  placement: header
+}
+
+body:json {
+  {
+    "status": "preparation",
+    "encounter": "169a0cde-0667-4e15-9950-16163b1f2b9b",
+    "item": "49466e44-a55e-4b87-a06c-3d4056a9f318",
+    "location" : "ca9b2f69-03db-4fbe-bd71-0887a3f196a0",
+    "quantity" : 100,
+    "days_supply": 100
+  }
+}

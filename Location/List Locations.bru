@@ -5,17 +5,17 @@ meta {
 }
 
 get {
-  url: {{url}}/api/v1/facility/:facility_id/location/?name=test
+  url: {{url}}/api/v1/facility/:facility_id/location/
   body: json
   auth: inherit
 }
 
 params:query {
-  name: test
+  ~name: test
 }
 
 params:path {
-  facility_id: 44113366-0f76-483e-9e5a-ca9ae80072f7
+  facility_id: 60d4f3b1-6392-4c0f-bba1-f987c450f3bc
 }
 
 body:json {
