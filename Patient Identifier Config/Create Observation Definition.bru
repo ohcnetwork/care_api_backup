@@ -1,0 +1,24 @@
+meta {
+  name: Create Observation Definition
+  type: http
+  seq: 2
+}
+
+post {
+  url: {{url}}/api/v1/patient_identifier_config/
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "config" : {
+      "use" : "official",
+      "system" : "https://ohc.network/aadhar",
+      "required" : false,
+      "unique" : true,
+      "regex" : "",
+      "display" : "Aadhar" 
+    }
+  }
+}

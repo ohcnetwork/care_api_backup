@@ -5,13 +5,9 @@ meta {
 }
 
 post {
-  url: {{url}}/api/v1/patient/:patient_id/medication/dispense/
+  url: {{url}}/api/v1/medication/dispense/upsert/
   body: json
   auth: inherit
-}
-
-params:path {
-  patient_id: bcdd6773-c9a1-44e4-9cd6-968ad2f6aa3c
 }
 
 auth:apikey {

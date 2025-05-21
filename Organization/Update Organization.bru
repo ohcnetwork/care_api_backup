@@ -1,13 +1,19 @@
 meta {
-  name: Create Organization
+  name: Update Organization
   type: http
-  seq: 2
+  seq: 6
 }
 
-post {
-  url: {{url}}/api/v1/organization/
+put {
+  url: {{url}}/api/v1/organization/1d3dd517-4abf-422d-809f-5f1a8acf3dcb/
   body: json
   auth: inherit
+}
+
+params:query {
+  ~org_type: govt
+  ~name: test
+  ~parent: 
 }
 
 auth:apikey {

@@ -5,7 +5,12 @@ meta {
 }
 
 get {
-  url: {{url}}/api/v1/supply_delivery/
+  url: {{url}}/api/v1/supply_delivery/?origin_isnull=False&supplied_inventory_item_product_knowledge=e02e3954-aed6-452c-a639-958177fbf87f
   body: none
   auth: inherit
+}
+
+params:query {
+  origin_isnull: False
+  supplied_inventory_item_product_knowledge: e02e3954-aed6-452c-a639-958177fbf87f
 }
