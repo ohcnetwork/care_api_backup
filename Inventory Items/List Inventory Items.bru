@@ -5,7 +5,11 @@ meta {
 }
 
 get {
-  url: {{url}}/api/v1/facility/60d4f3b1-6392-4c0f-bba1-f987c450f3bc/location/ca9b2f69-03db-4fbe-bd71-0887a3f196a0/product/
+  url: {{url}}/api/v1/facility/60d4f3b1-6392-4c0f-bba1-f987c450f3bc/location/ca9b2f69-03db-4fbe-bd71-0887a3f196a0/product/?net_content_gt=0
   body: none
   auth: inherit
+}
+
+params:query {
+  net_content_gt: 0
 }

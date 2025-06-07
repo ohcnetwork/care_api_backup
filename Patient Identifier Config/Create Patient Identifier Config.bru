@@ -1,5 +1,5 @@
 meta {
-  name: Create Observation Definition
+  name: Create Patient Identifier Config
   type: http
   seq: 2
 }
@@ -11,14 +11,14 @@ post {
 }
 
 body:json {
-  {
+  {"status" :"active",
     "config" : {
       "use" : "official",
-      "system" : "https://ohc.network/aadhar",
-      "required" : false,
+      "system" : "https://ohc.network/driving_license",
+      "required" : true,
       "unique" : true,
       "regex" : "",
-      "display" : "Aadhar" 
+      "display" : "Drivers License" 
     }
   }
 }

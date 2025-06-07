@@ -1,0 +1,58 @@
+meta {
+  name: Medication Request Create
+  type: http
+  seq: 2
+}
+
+post {
+  url: {{url}}/api/v1/patient/:patient_id/medication/administration/
+  body: json
+  auth: inherit
+}
+
+params:path {
+  patient_id: bcdd6773-c9a1-44e4-9cd6-968ad2f6aa3c
+}
+
+auth:apikey {
+  key: Authorization
+  value: {{auth}}
+  placement: header
+}
+
+body:json {
+  {
+    "request": "8ad7abe1-fba1-495b-8237-c22b098f5eb5",
+    "encounter": "169a0cde-0667-4e15-9950-16163b1f2b9b",
+    "administered_product" : "e02e3954-aed6-452c-a639-958177fbf87f",  
+    "occurrence_period_start": "2025-05-26T23:37",
+    "occurrence_period_end": "2025-05-26T23:37",
+    "note": "tret",
+    "status": "completed",
+    "dosage": {
+      "site": {
+        "code": "16217701000119102",
+        "system": "http://snomed.info/sct",
+        "display": "Structure of left deltoid muscle"
+      },
+      "route": {
+        "code": "26643006",
+        "system": "http://snomed.info/sct",
+        "display": "Oral route"
+      },
+      "method": {
+        "code": "738992009",
+        "system": "http://snomed.info/sct",
+        "display": "Chew"
+      },
+      "dose": {
+        "value": 10,
+        "unit": {
+          "code": "{tbl}",
+          "system": "http://unitsofmeasure.org",
+          "display": "tablets"
+        }
+      }
+    }
+  }
+}

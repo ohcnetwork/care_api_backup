@@ -1,0 +1,23 @@
+meta {
+  name: Create Charge Item Definition
+  type: http
+  seq: 2
+}
+
+post {
+  url: {{url}}/api/v1/tag_config/
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "slug" : "New test",
+    "display" : "testing here",
+    "category" : "drug",
+    "description" : "sdfsd",
+    "status" : "active",
+    "resource" : "encounter",
+    "parent" : "9aa31919-2045-423f-a6f5-74b2221710c2"
+  }
+}

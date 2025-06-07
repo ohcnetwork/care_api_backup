@@ -1,0 +1,22 @@
+meta {
+  name: Upsert Supply Delivery
+  type: http
+  seq: 5
+}
+
+post {
+  url: {{url}}/api/v1/supply_delivery/upsert/
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "datapoints": [
+      {
+        "id": "d915f3ca-bb62-42ef-8f60-e263fb85130f",
+        "status": "completed"
+      }
+    ]
+  }
+}

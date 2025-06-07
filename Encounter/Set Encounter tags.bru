@@ -1,0 +1,21 @@
+meta {
+  name: Set Encounter tags
+  type: http
+  seq: 9
+}
+
+get {
+  url: {{url}}/api/v1/encounter/ed2838e0-4103-430a-b294-8a8eee59eb13/?facility=44113366-0f76-483e-9e5a-ca9ae80072f7
+  body: none
+  auth: inherit
+}
+
+params:query {
+  facility: 44113366-0f76-483e-9e5a-ca9ae80072f7
+}
+
+auth:apikey {
+  key: Authorization
+  value: {{auth}}
+  placement: header
+}

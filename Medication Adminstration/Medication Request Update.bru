@@ -1,0 +1,23 @@
+meta {
+  name: Medication Request Update
+  type: http
+  seq: 3
+}
+
+put {
+  url: {{url}}/api/v1/patient/dac698c4-4974-4ccb-9427-aef65bb5f17d/medication/request/20b3bd04-800e-4cbd-99a1-404841b9de52/
+  body: json
+  auth: inherit
+}
+
+auth:apikey {
+  key: Authorization
+  value: {{auth}}
+  placement: header
+}
+
+body:json {
+  {
+      "status" : "active"
+  }
+}

@@ -1,0 +1,18 @@
+meta {
+  name: Update Patient Identifier
+  type: http
+  seq: 7
+}
+
+post {
+  url: {{url}}/api/v1/patient/f4022f59-94c6-4de8-95b8-5660a5a804ba/update_identifier/
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "config": "44fa6f87-cc05-49e0-bb59-60282bb97993",
+    "value" : "123456"
+  }
+}
