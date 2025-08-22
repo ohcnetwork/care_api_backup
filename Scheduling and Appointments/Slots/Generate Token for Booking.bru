@@ -1,0 +1,22 @@
+meta {
+  name: Generate Token for Booking
+  type: http
+  seq: 5
+}
+
+post {
+  url: {{url}}/api/v1/facility/:facility_id/appointments/9ac1f588-d3b7-46ed-95ba-01b4ab142ae9/generate_token/
+  body: json
+  auth: inherit
+}
+
+params:path {
+  facility_id: 60d4f3b1-6392-4c0f-bba1-f987c450f3bc
+}
+
+body:json {
+  {
+    "category" : "15674fb3-08a6-4f0a-98df-f8e63874a8e3",
+    "note" : "Not feeling well"
+  }
+}
