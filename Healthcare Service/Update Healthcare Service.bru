@@ -1,0 +1,17 @@
+meta {
+  name: Update Healthcare Service
+  type: http
+  seq: 4
+}
+
+patch {
+  url: {{url}}/api/v1/facility/60d4f3b1-6392-4c0f-bba1-f987c450f3bc/healthcare_service/037ec3f4-7e17-4bcb-995a-821989430e50/
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "name" : "testing here"
+  }
+}

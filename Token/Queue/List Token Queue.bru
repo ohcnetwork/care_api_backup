@@ -1,0 +1,35 @@
+meta {
+  name: List Token Queue
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{url}}/api/v1/facility/:facility_id/token/queue/?resource_type=practitioner&resource_id=f587658b-f814-4a6e-99a8-98e62638be62
+  body: json
+  auth: inherit
+}
+
+params:query {
+  resource_type: practitioner
+  resource_id: f587658b-f814-4a6e-99a8-98e62638be62
+}
+
+params:path {
+  facility_id: 60d4f3b1-6392-4c0f-bba1-f987c450f3bc
+}
+
+body:json {
+  {
+      "name": "OP Consultations",
+    "resource_type" : "practitioner",
+    "date" : "2025-01-01",
+    "set_is_primary" : false,
+      "resource_type" : "practitioner",
+    "resource_id": "f587658b-f814-4a6e-99a8-98e62638be62"
+  }
+}
+
+settings {
+  encodeUrl: true
+}

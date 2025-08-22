@@ -1,0 +1,76 @@
+meta {
+  name: test
+  type: http
+  seq: 44
+}
+
+post {
+  url: https://develop-api.ohc.network/api/v1/batch_requests/
+  body: json
+  auth: basic
+}
+
+headers {
+  accept: application/json
+  accept-language: en-US,en;q=0.9,de;q=0.8
+  cache-control: no-cache
+  content-type: application/json
+  dnt: 1
+  origin: https://develop.ohc.network
+  pragma: no-cache
+  priority: u=1, i
+  referer: https://develop.ohc.network/
+  sec-ch-ua: "Google Chrome";v="137", "Chromium";v="137", "Not/A)Brand";v="24"
+  sec-ch-ua-mobile: ?0
+  sec-ch-ua-platform: "macOS"
+  sec-fetch-dest: empty
+  sec-fetch-mode: cors
+  sec-fetch-site: same-site
+  user-agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+}
+
+auth:basic {
+  username: aravind
+  password: Lilo@123
+}
+
+body:json {
+  {
+    "requests": [
+      {
+        "url": "/api/v1/facility/fbdd30eb-f33d-49c0-856b-64197a691b0f/service_request/apply_activity_definition/",
+        "method": "POST",
+        "body": {
+          "service_request": {
+            "title": "Complete Blood Count (CBC) Panel",
+            "status": "active",
+            "intent": "order",
+            "priority": "routine",
+            "category": "laboratory",
+            "do_not_perform": false,
+            "note": null,
+            "code": {
+              "code": "26604007",
+              "system": "http://snomed.info/sct",
+              "display": "Complete blood count"
+            },
+            "body_site": {
+              "code": "16217501000119107",
+              "display": "Structure of left supraclavicular lymph node",
+              "system": "http://snomed.info/sct"
+            },
+            "occurance": null,
+            "patient_instruction": null,
+            "requester": "0b005ca8-8a15-4ee9-8731-3017d23f232f",
+            "locations": [
+              "7fa99860-3714-434a-b0b6-5c7eb0c559fb"
+            ]
+          },
+          "activity_definition": "7c47fd5e-4c69-4f05-8d23-232edeca6614",
+          "encounter": "19de5d69-b7ab-445f-a3a7-240f37ac8828"
+        },
+        "reference_id": "service_request"
+      }
+    ]
+  }
+}

@@ -5,18 +5,18 @@ meta {
 }
 
 post {
-  url: {{url}}/api/v1/facility/:facility_id/slots/00b82233-6e29-446d-be95-e466f83e89ba/create_appointment/
+  url: {{url}}/api/v1/facility/:facility_id/slots/f48c664d-b7c5-4f0c-9cc0-bea6d88d605c/create_appointment/
   body: json
   auth: inherit
 }
 
 params:path {
-  facility_id: f779a7a2-c7a1-499f-99dd-d8c39113b4d0
+  facility_id: 60d4f3b1-6392-4c0f-bba1-f987c450f3bc
 }
 
 body:json {
   {
-    "patient" : "0f9552bd-1498-4b92-8f62-a83ad6f493b6",
-    "reason_for_visit" : "Not feeling well"
+    "patient" : "b2a296c4-1421-46b7-949b-4fc78cdd0e9e",
+    "note" : "Not feeling well"
   }
 }

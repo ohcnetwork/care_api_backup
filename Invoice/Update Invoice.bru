@@ -1,11 +1,11 @@
 meta {
-  name: Create Invoice
+  name: Update Invoice
   type: http
-  seq: 2
+  seq: 6
 }
 
-post {
-  url: {{url}}/api/v1/facility/60d4f3b1-6392-4c0f-bba1-f987c450f3bc/invoice/
+patch {
+  url: {{url}}/api/v1/facility/60d4f3b1-6392-4c0f-bba1-f987c450f3bc/invoice/36b8248e-b524-4512-85bc-54902e2d63bb/
   body: json
   auth: inherit
 }

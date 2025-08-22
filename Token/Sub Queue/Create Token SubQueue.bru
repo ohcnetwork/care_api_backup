@@ -1,0 +1,27 @@
+meta {
+  name: Create Token SubQueue
+  type: http
+  seq: 3
+}
+
+post {
+  url: {{url}}/api/v1/facility/:facility_id/token/sub_queue/
+  body: json
+  auth: inherit
+}
+
+params:path {
+  facility_id: 60d4f3b1-6392-4c0f-bba1-f987c450f3bc
+}
+
+body:json {
+  {
+      "name": "OP Consultations",
+      "resource_type" : "practitioner",
+    "resource_id": "f587658b-f814-4a6e-99a8-98e62638be62"
+  }
+}
+
+settings {
+  encodeUrl: true
+}

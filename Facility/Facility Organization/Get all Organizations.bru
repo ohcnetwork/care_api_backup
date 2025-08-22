@@ -5,7 +5,7 @@ meta {
 }
 
 get {
-  url: {{url}}/api/v1/facility/8e434d7f-dda7-4a20-9f2a-041b26e0e1fa/organizations/
+  url: {{url}}/api/v1/facility/:facility_id/organizations/
   body: none
   auth: inherit
 }
@@ -13,6 +13,10 @@ get {
 params:query {
   ~parent: <parent_uuid>
   ~name: test
+}
+
+params:path {
+  facility_id: 60d4f3b1-6392-4c0f-bba1-f987c450f3bc
 }
 
 auth:apikey {

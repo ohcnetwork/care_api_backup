@@ -1,0 +1,39 @@
+meta {
+  name: Create Schedule Availability
+  type: http
+  seq: 4
+}
+
+post {
+  url: {{url}}/api/v1/facility/:facility_id/schedule/6cfd24ff-4a35-45aa-ba67-6e08eb22316d/availability/
+  body: json
+  auth: inherit
+}
+
+params:path {
+  facility_id: 60d4f3b1-6392-4c0f-bba1-f987c450f3bc
+}
+
+body:json {
+  
+      {
+        "name": "Morning Consultations",
+        "slot_type": "appointment",
+        "slot_size_in_minutes": 10,
+        "tokens_per_slot": 2,
+        "reason": "something",
+        "availability": [{
+          "day_of_week": 6,
+          "start_time": "09:00",
+          "end_time": "11:00"
+        },{
+          "day_of_week": 4,
+          "start_time": "09:00",
+          "end_time": "11:00"
+        },{
+          "day_of_week": 5,
+          "start_time": "09:00",
+          "end_time": "11:00"
+        }]
+      }
+}

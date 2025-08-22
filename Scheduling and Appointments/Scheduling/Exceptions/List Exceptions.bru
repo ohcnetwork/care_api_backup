@@ -5,11 +5,15 @@ meta {
 }
 
 get {
-  url: {{url}}/api/v1/facility/:facility_id/schedule_exceptions/
+  url: {{url}}/api/v1/facility/:facility_id/schedule_exceptions/?resource_type=practitioner
   body: none
   auth: inherit
 }
 
+params:query {
+  resource_type: practitioner
+}
+
 params:path {
-  facility_id: f779a7a2-c7a1-499f-99dd-d8c39113b4d0
+  facility_id: 60d4f3b1-6392-4c0f-bba1-f987c450f3bc
 }

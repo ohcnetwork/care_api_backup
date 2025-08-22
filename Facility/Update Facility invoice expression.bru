@@ -1,0 +1,17 @@
+meta {
+  name: Update Facility invoice expression
+  type: http
+  seq: 9
+}
+
+post {
+  url: {{url}}/api/v1/facility/60d4f3b1-6392-4c0f-bba1-f987c450f3bc/set_invoice_expression/
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "invoice_number_expression" : "f'test{invoice_count}{current_year_yy}'"
+  }
+}

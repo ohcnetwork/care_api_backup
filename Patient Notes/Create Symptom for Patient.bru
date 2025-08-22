@@ -1,0 +1,32 @@
+meta {
+  name: Create Symptom for Patient
+  type: http
+  seq: 3
+}
+
+post {
+  url: {{url}}/api/v1/patient/0f9552bd-1498-4b92-8f62-a83ad6f493b6/condition/
+  body: json
+  auth: inherit
+}
+
+auth:apikey {
+  key: Authorization
+  value: {{auth}}
+  placement: header
+}
+
+body:json {
+  {
+  "clinical_status" : "active",
+  "verification_status" : "confirmed",
+  "category" : "problem_list_item",
+  "severity" : "mild",
+  "encounter": "40faecc6-6199-48cd-bc2a-dd9e73b920f9",
+  "code" : {
+              "display": "Low blood pressure",
+              "system": "http://snomed.info/sct",
+              "code": "45007003"
+          }
+  }
+}

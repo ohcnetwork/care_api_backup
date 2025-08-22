@@ -1,0 +1,22 @@
+meta {
+  name: Get Notes for Patient
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{url}}/api/v1/patient/bcdd6773-c9a1-44e4-9cd6-968ad2f6aa3c/thread/?encounter_isnull=True
+  body: none
+  auth: inherit
+}
+
+params:query {
+  encounter_isnull: True
+  ~encounter: bcdd6773-c9a1-44e4-9cd6-968ad2f6aa3c
+}
+
+auth:apikey {
+  key: Authorization
+  value: {{auth}}
+  placement: header
+}

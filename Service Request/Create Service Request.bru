@@ -5,9 +5,13 @@ meta {
 }
 
 post {
-  url: {{url}}/api/v1/facility/60d4f3b1-6392-4c0f-bba1-f987c450f3bc/service_request/
+  url: {{url}}/api/v1/facility/:facility_id/service_request/
   body: json
   auth: inherit
+}
+
+params:path {
+  facility_id: 60d4f3b1-6392-4c0f-bba1-f987c450f3bc
 }
 
 body:json {
@@ -21,6 +25,7 @@ body:json {
         "display": "Fluoroscopic venography of left limb with contrast",
         "system": "http://snomed.info/sct",
         "code": "997199941000119102"},
-    "encounter" : "169a0cde-0667-4e15-9950-16163b1f2b9b"
+    "encounter" : "169a0cde-0667-4e15-9950-16163b1f2b9b",
+    "requester" : "f587658b-f814-4a6e-99a8-98e62638be62"
   }
 }
