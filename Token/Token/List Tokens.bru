@@ -1,11 +1,11 @@
 meta {
-  name: List Token Category
+  name: List Tokens
   type: http
   seq: 2
 }
 
 get {
-  url: {{url}}/api/v1/facility/:facility_id/token/category/
+  url: {{url}}/api/v1/facility/:facility_id/token/queue/da28bcd7-a691-46c8-8588-00131b8cdaab/token/
   body: json
   auth: inherit
 }
@@ -16,9 +16,7 @@ params:path {
 
 body:json {
   {
-      "name": "OP Consultations",
-    "resource_type" : "practitioner",
-    "shorthand" : "Hello"
+      "category": "15674fb3-08a6-4f0a-98df-f8e63874a8e3"
   }
 }
 

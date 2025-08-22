@@ -1,0 +1,25 @@
+meta {
+  name: Create Token
+  type: http
+  seq: 3
+}
+
+post {
+  url: {{url}}/api/v1/facility/:facility_id/token/queue/da28bcd7-a691-46c8-8588-00131b8cdaab/token/
+  body: json
+  auth: inherit
+}
+
+params:path {
+  facility_id: 60d4f3b1-6392-4c0f-bba1-f987c450f3bc
+}
+
+body:json {
+  {
+      "category": "15674fb3-08a6-4f0a-98df-f8e63874a8e3"
+  }
+}
+
+settings {
+  encodeUrl: true
+}
