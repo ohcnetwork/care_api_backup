@@ -5,11 +5,15 @@ meta {
 }
 
 get {
-  url: {{url}}/api/v1/patient/f4022f59-94c6-4de8-95b8-5660a5a804ba/?facility=44113366-0f76-483e-9e5a-ca9ae80072f7
+  url: {{url}}/api/v1/patient/:patient_id/?facility=44113366-0f76-483e-9e5a-ca9ae80072f7
   body: none
   auth: inherit
 }
 
 params:query {
   facility: 44113366-0f76-483e-9e5a-ca9ae80072f7
+}
+
+params:path {
+  patient_id: b2a296c4-1421-46b7-949b-4fc78cdd0e9e
 }

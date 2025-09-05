@@ -1,0 +1,25 @@
+meta {
+  name: Move Next token To SubQueue
+  type: http
+  seq: 6
+}
+
+post {
+  url: {{url}}/api/v1/facility/:facility_id/token/queue/767b84ef-1522-4783-838b-79f23872af47/set_next_token_to_subqueue/
+  body: json
+  auth: inherit
+}
+
+params:path {
+  facility_id: 60d4f3b1-6392-4c0f-bba1-f987c450f3bc
+}
+
+body:json {
+  {
+      "sub_queue" : "cbec166e-dbd3-416d-bf02-f268c9300a54"
+  }
+}
+
+settings {
+  encodeUrl: true
+}

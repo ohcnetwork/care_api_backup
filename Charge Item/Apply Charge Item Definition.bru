@@ -1,0 +1,22 @@
+meta {
+  name: Apply Charge Item Definition
+  type: http
+  seq: 4
+}
+
+post {
+  url: {{url}}/api/v1/facility/60d4f3b1-6392-4c0f-bba1-f987c450f3bc/charge_item/apply_charge_item_defs/
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "requests" : [ {
+      "charge_item_definition" : "93fd846a-cc5d-4ef4-850b-2581352649b4",
+      "quantity" : "1",
+      "patient" : "bcdd6773-c9a1-44e4-9cd6-968ad2f6aa3c"
+    }]
+    
+  }
+}

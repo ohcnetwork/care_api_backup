@@ -1,16 +1,17 @@
 meta {
-  name: List Tokens
+  name: Retrieve Token
   type: http
-  seq: 2
+  seq: 4
 }
 
 get {
-  url: {{url}}/api/v1/facility/:facility_id/token/queue/:queue_id/token
+  url: {{url}}/api/v1/facility/:facility_id/token/queue/:queue_id/token/:token_id/
   body: json
   auth: inherit
 }
 
 params:path {
+  token_id: ebf896c0-71ad-4363-b318-df6184812ef0
   queue_id: 767b84ef-1522-4783-838b-79f23872af47
   facility_id: 60d4f3b1-6392-4c0f-bba1-f987c450f3bc
 }

@@ -1,0 +1,21 @@
+meta {
+  name: Schedule Availability set CI Definition
+  type: http
+  seq: 6
+}
+
+post {
+  url: {{url}}/api/v1/facility/:facility_id/schedule/6cfd24ff-4a35-45aa-ba67-6e08eb22316d/set_charge_item_definition/
+  body: json
+  auth: inherit
+}
+
+params:path {
+  facility_id: 60d4f3b1-6392-4c0f-bba1-f987c450f3bc
+}
+
+body:json {
+  {
+    "charge_item_definition": "93fd846a-cc5d-4ef4-850b-2581352649b4"
+  }
+}

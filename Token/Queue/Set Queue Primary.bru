@@ -1,11 +1,11 @@
 meta {
-  name: Create Token Queue
+  name: Set Queue Primary
   type: http
-  seq: 1
+  seq: 4
 }
 
 post {
-  url: {{url}}/api/v1/facility/:facility_id/token/queue/
+  url: {{url}}/api/v1/facility/:facility_id/token/queue/c2fd192f-10fa-4e01-b7aa-794226a16756/set_primary/
   body: json
   auth: inherit
 }

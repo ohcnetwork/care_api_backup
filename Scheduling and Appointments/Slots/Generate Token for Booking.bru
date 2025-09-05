@@ -5,12 +5,13 @@ meta {
 }
 
 post {
-  url: {{url}}/api/v1/facility/:facility_id/appointments/9ac1f588-d3b7-46ed-95ba-01b4ab142ae9/generate_token/
+  url: {{url}}/api/v1/facility/:facility_id/appointments/:appointment_id/generate_token/
   body: json
   auth: inherit
 }
 
 params:path {
+  appointment_id: c9aa1193-e7bd-4c1b-ba7e-b8f8449f6f1f
   facility_id: 60d4f3b1-6392-4c0f-bba1-f987c450f3bc
 }
 
