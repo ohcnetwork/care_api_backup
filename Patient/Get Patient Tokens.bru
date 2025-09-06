@@ -5,9 +5,13 @@ meta {
 }
 
 get {
-  url: {{url}}/api/v1/patient/:patient_id/get_tokens
+  url: {{url}}/api/v1/patient/:patient_id/get_tokens?facility=60d4f3b1-6392-4c0f-bba1-f987c450f3bc
   body: none
   auth: inherit
+}
+
+params:query {
+  facility: 60d4f3b1-6392-4c0f-bba1-f987c450f3bc
 }
 
 params:path {

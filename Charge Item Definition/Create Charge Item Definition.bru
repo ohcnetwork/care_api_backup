@@ -5,22 +5,29 @@ meta {
 }
 
 post {
-  url: {{url}}/api/v1/facility/60d4f3b1-6392-4c0f-bba1-f987c450f3bc/charge_item_definition/
+  url: {{url}}/api/v1/facility/60d4f3b1-6392-4c0f-bba1-f987c450f3bc/resource_category/
   body: json
   auth: inherit
 }
 
 body:json {
+  
+  
+  
   {
-    "slug" : "testsdfew1",
-    "title" : "testing here",
-    "status" : "active",
-    "category" : "imaging",
-    "description" : "sdfsd",
-    "price_components" : [{
-      "monetary_component_type" : "base",
-      "amount" : 100
-    }],
-    "category" : "114"
-  }
+        "id": "aed8aba8-738c-42ba-998f-2c45318cd82a",
+        "status": "active",
+        "title": "testing here",
+        "slug": "testsdfew1",
+        "derived_from_uri": null,
+        "description": "sdfsd",
+        "purpose": null,
+        "price_components": [
+          {
+            "amount": 100,
+            "monetary_component_type": "base"
+          }
+        ],
+        "category": ""
+      }
 }
