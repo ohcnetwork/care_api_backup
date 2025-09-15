@@ -22,7 +22,7 @@ auth:apikey {
 
 body:json {
   {
-    "status": "entered_in_error",
+    "status": "active",
     "intent": "plan",
     "category": "inpatient",
     "priority": "urgent",
@@ -30,6 +30,12 @@ body:json {
     "dosage_instruction": [],
     "encounter": "169a0cde-0667-4e15-9950-16163b1f2b9b",
     "authored_on": "2025-01-27T18:35:29.284350Z",
-    "requested_product": "b37c28ba-aeff-492e-a461-15d445891efb"
+    "requested_product": "b37c28ba-aeff-492e-a461-15d445891efb",
+    "requester" : "78c6bdc2-b6bd-4f87-9dd0-29727f87946d",
+    "create_prescription" :{ 
+      "name" : "test",
+      "note" : "sdfsd",
+      "alternate_identifier" :  "aead7530-b373-4129-9f70-4696e6901393"
+    }
   }
 }

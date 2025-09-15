@@ -5,15 +5,16 @@ meta {
 }
 
 get {
-  url: {{url}}/api/v1/facility/:facility_id/appointments/?status
+  url: {{url}}/api/v1/facility/:facility_id/appointments/?resource_type=practitioner&resource_ids=416faffc-2903-4da7-b534-b641a9592f82%2C7722be34-5423-42c3-a5bf-ae019a73148e
   body: none
   auth: inherit
 }
 
 params:query {
-  status: 
+  resource_type: practitioner
+  resource_ids: 416faffc-2903-4da7-b534-b641a9592f82%2C7722be34-5423-42c3-a5bf-ae019a73148e
 }
 
 params:path {
-  facility_id: f779a7a2-c7a1-499f-99dd-d8c39113b4d0
+  facility_id: 60d4f3b1-6392-4c0f-bba1-f987c450f3bc
 }

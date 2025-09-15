@@ -5,27 +5,30 @@ meta {
 }
 
 put {
-  url: {{url}}/api/v1/facility/60d4f3b1-6392-4c0f-bba1-f987c450f3bc/activity_definition/2f8cd337-e784-43c1-89bc-98979fbaadb0/
+  url: {{url}}/api/v1/facility/60d4f3b1-6392-4c0f-bba1-f987c450f3bc/activity_definition/f-60d4f3b1-6392-4c0f-bba1-f987c450f3bc-123456/
   body: json
   auth: inherit
 }
 
 body:json {
   {
-    "slug" : "test2",
-    "title" : "testing here",
+    "slug_value" : "123456",
+    "title" : "Correct Test",
     "status" : "active",
-    "category" : "imaging",
+    "classification" : "imaging",
     "permitted_data_type" : "boolean",
     "description" : "sdfsd",
-    "category" : "laboratory",
+    "classification" : "laboratory", 
     "kind" : "service_request",
     "code" : {
-        "display": "Fluoroscopic venography of left limb with contrast",
+        "display": "Fluordgfgdfgdfgflimb with contrast",
         "system": "http://snomed.info/sct",
         "code": "997199941000119102"},
-    "specimen_requirements" : ["f5132217-ad1b-4447-ba54-7105a5b4dde3"],
+    "specimen_requirements" : [],
+    "locations" : [],
+    "healthcare_service" : null,
+    "charge_item_definitions" : [],
     "observation_result_requirements" : [],
-    "charge_item_definitions" : ["70ec3d2d-b546-49ff-ba73-a9cf9e36c917"]
+    "category" : null
   }
 }

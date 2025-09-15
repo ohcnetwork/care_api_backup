@@ -1,36 +1,38 @@
 meta {
-  name: Create Observation Definition
+  name: Update Observation Definition
   type: http
-  seq: 2
+  seq: 4
 }
 
-post {
-  url: {{url}}/api/v1/observation_definition/
+put {
+  url: {{url}}/api/v1/observation_definition/f-60d4f3b1-6392-4c0f-bba1-f987c450f3bc-122123/
   body: json
   auth: inherit
 }
 
 body:json {
   {
-    "slug_value" : "12345",
-    "title" : "testing here",
-    "status" : "active",
-    "description" : "sdfdsfsdf",
-  "code": {
-                  "display": "Blood pressure",
-                  "system": "http://loinc.org",
-                  "code": "LP40259-1"
-              },
-    "category" : "imaging",
-    "permitted_data_type" : "decimal",
-    "facility" : "60d4f3b1-6392-4c0f-bba1-f987c450f3bc",
+    "slug_value": "122123",
+    "title": "testing here",
+    "status": "active",
+    "description": "sdfdsfsdf",
+    "code": {
+      "display": "Blood pressure",
+      "system": "http://loinc.org",
+      "code": "LP40259-1"
+    },
+    "category": "imaging",
+    "permitted_data_type": "decimal",
     "qualified_ranges": [
       {
         "conditions": [
           {
             "metric": "patient_age",
-            "operation" : "equality",
-            "value": "male"
+            "operation" : "in_range",
+            "value": {
+              "min": 18,
+              "max": 65
+            }
           }
         ],
         "ranges": [

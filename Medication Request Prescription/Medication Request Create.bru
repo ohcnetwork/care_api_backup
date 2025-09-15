@@ -1,0 +1,29 @@
+meta {
+  name: Medication Request Create
+  type: http
+  seq: 2
+}
+
+post {
+  url: {{url}}/api/v1/patient/:patient_id/medication/prescription/
+  body: json
+  auth: inherit
+}
+
+params:path {
+  patient_id: bcdd6773-c9a1-44e4-9cd6-968ad2f6aa3c
+}
+
+auth:apikey {
+  key: Authorization
+  value: {{auth}}
+  placement: header
+}
+
+body:json {
+  {
+    "status": "active",
+    "encounter": "169a0cde-0667-4e15-9950-16163b1f2b9b",
+    "prescribed_by" : "f587658b-f814-4a6e-99a8-98e62638be62"
+  }
+}

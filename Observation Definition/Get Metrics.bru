@@ -1,0 +1,11 @@
+meta {
+  name: Get Metrics
+  type: http
+  seq: 6
+}
+
+get {
+  url: {{url}}/api/v1/observation_definition/metrics/
+  body: none
+  auth: inherit
+}

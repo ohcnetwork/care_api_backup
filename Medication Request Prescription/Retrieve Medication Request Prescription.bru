@@ -1,0 +1,21 @@
+meta {
+  name: Retrieve Medication Request Prescription
+  type: http
+  seq: 4
+}
+
+get {
+  url: {{url}}/api/v1/patient/:patient_id/medication/prescription/617f3fe5-7ca5-41d5-8bed-ae9965b2656b/
+  body: none
+  auth: inherit
+}
+
+params:path {
+  patient_id: bcdd6773-c9a1-44e4-9cd6-968ad2f6aa3c
+}
+
+auth:apikey {
+  key: Authorization
+  value: {{auth}}
+  placement: header
+}

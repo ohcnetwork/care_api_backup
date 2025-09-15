@@ -1,24 +1,24 @@
 meta {
-  name: Create Product Knowledge
+  name: Update Product Knowledge
   type: http
-  seq: 2
+  seq: 4
 }
 
-post {
-  url: {{url}}/api/v1/product_knowledge/
+put {
+  url: {{url}}/api/v1/product_knowledge/f-60d4f3b1-6392-4c0f-bba1-f987c450f3bc-test123434543/
   body: json
   auth: inherit
 }
 
 body:json {
   {
-    "slug_value" : "test1234546",
+    "slug_value" : "test123434543",
     "status" : "active",
     "product_type"  : "medication",
     "name" : "test",
     "base_unit": "",
-        "category": "f-60d4f3b1-6392-4c0f-bba1-f987c450f3bc-12345",
     "facility" : "60d4f3b1-6392-4c0f-bba1-f987c450f3bc",
+  //       "category": "testsdfew1",
       "base_unit" : {
         "display": "tablets",
         "system": "http://unitsofmeasure.org",

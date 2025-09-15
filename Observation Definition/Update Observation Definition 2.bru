@@ -1,18 +1,22 @@
 meta {
-  name: Create Observation Definition
+  name: Update Observation Definition 2
   type: http
-  seq: 2
+  seq: 5
 }
 
-post {
-  url: {{url}}/api/v1/observation_definition/
+put {
+  url: {{url}}/api/v1/observation_definition/1234/?facility=60d4f3b1-6392-4c0f-bba1-f987c450f3bc
   body: json
   auth: inherit
 }
 
+params:query {
+  facility: 60d4f3b1-6392-4c0f-bba1-f987c450f3bc
+}
+
 body:json {
   {
-    "slug_value" : "12345",
+    "slug" : "1234",
     "title" : "testing here",
     "status" : "active",
     "description" : "sdfdsfsdf",
@@ -28,7 +32,7 @@ body:json {
       {
         "conditions": [
           {
-            "metric": "patient_age",
+            "metric": "patient_gender",
             "operation" : "equality",
             "value": "male"
           }

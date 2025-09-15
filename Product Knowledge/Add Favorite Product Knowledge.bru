@@ -1,0 +1,15 @@
+meta {
+  name: Add Favorite Product Knowledge
+  type: http
+  seq: 5
+}
+
+post {
+  url: {{url}}/api/v1/product_knowledge/test123/add_favorite/?facility=60d4f3b1-6392-4c0f-bba1-f987c450f3bc
+  body: none
+  auth: inherit
+}
+
+params:query {
+  facility: 60d4f3b1-6392-4c0f-bba1-f987c450f3bc
+}

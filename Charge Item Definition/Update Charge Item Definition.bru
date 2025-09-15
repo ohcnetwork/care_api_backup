@@ -1,11 +1,11 @@
 meta {
-  name: Create Charge Item Definition
+  name: Update Charge Item Definition
   type: http
-  seq: 2
+  seq: 4
 }
 
-post {
-  url: {{url}}/api/v1/facility/60d4f3b1-6392-4c0f-bba1-f987c450f3bc/charge_item_definition/
+put {
+  url: {{url}}/api/v1/facility/60d4f3b1-6392-4c0f-bba1-f987c450f3bc/charge_item_definition/f-60d4f3b1-6392-4c0f-bba1-f987c450f3bc-gender_inequality12/
   body: json
   auth: inherit
 }
@@ -14,7 +14,7 @@ body:json {
   {
     "status": "active",
     "title": "Gender Inequality",
-    "slug_value": "gender_inequality",
+    "slug_value": "gender_inequality12",
     "derived_from_uri": null,
     "description": "sdfsd",
     "purpose": null,

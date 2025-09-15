@@ -5,7 +5,7 @@ meta {
 }
 
 post {
-  url: {{url}}/api/v1/facility/60d4f3b1-6392-4c0f-bba1-f987c450f3bc/diagnostic_report/02050ea8-b368-4ad4-9fcf-8c9590782538/upsert_observations/
+  url: {{url}}/api/v1/patient/bcdd6773-c9a1-44e4-9cd6-968ad2f6aa3c/diagnostic_report/a1b5c080-3c12-4466-80bf-fb47b30bf3fe/upsert_observations/
   body: json
   auth: inherit
 }
@@ -14,14 +14,14 @@ body:json {
   {
     "observations": [
       {
-        "observation_definition": "a93598c6-7e9d-40a3-8035-437be5efcb8d",
+        "observation_definition": "1234",
         "observation": {
           "status": "final",
           "subject_type": "encounter",
           "effective_datetime": "2025-03-06T13:40:03.555503Z",
-          "value_type": "boolean",
+          "value_type": "decimal",
           "value": {
-            "value": "true"
+            "value": "45"
           }
         }
       }
