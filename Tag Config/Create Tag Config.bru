@@ -1,5 +1,5 @@
 meta {
-  name: Create Charge Item Definition
+  name: Create Tag Config
   type: http
   seq: 2
 }
@@ -12,11 +12,13 @@ post {
 
 body:json {
   {
-    "slug" : "New test sdfs",
+    "slug" : "New tefst sdfs",
     "display" : "testing here",
     "category" : "drug",
     "description" : "sdfsd",
     "status" : "active",
-    "resource" : "patient"
+    "resource" : "patient",
+    "facility" : "60d4f3b1-6392-4c0f-bba1-f987c450f3bc",
+    "facility_organization" : "1aeea5a9-0948-4770-a262-320d0b5878dc"
   }
 }

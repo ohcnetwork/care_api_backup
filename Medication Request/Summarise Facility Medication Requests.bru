@@ -5,13 +5,13 @@ meta {
 }
 
 get {
-  url: {{url}}/api/v1/facility/:facility_id/medication_prescription/summary/
+  url: {{url}}/api/v1/facility/:facility_id/medication_prescription/summary/?status=completed
   body: none
   auth: inherit
 }
 
 params:query {
-  ~priority: routine
+  status: completed
 }
 
 params:path {

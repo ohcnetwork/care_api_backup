@@ -1,0 +1,24 @@
+meta {
+  name: Update Tag Config copy
+  type: http
+  seq: 4
+}
+
+put {
+  url: {{url}}/api/v1/tag_config/f4f7e342-7e3b-4846-815a-667efd2b55c1/
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "slug" : "New tefst sdfs",
+    "display" : "testing here",
+    "category" : "drug",
+    "description" : "sdfsd",
+    "status" : "active",
+    "resource" : "patient",
+    "facility" : "60d4f3b1-6392-4c0f-bba1-f987c450f3bc",
+    "facility_organization" : "1aeea5a9-0948-4770-a262-320d0b5878dc"
+  }
+}
