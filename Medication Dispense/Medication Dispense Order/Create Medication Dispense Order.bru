@@ -1,0 +1,30 @@
+meta {
+  name: Create Medication Dispense Order
+  type: http
+  seq: 2
+}
+
+post {
+  url: {{url}}/api/v1/facility/:facility_id/order/dispense/
+  body: json
+  auth: inherit
+}
+
+params:path {
+  facility_id: 44113366-0f76-483e-9e5a-ca9ae80072f7
+}
+
+auth:apikey {
+  key: Authorization
+  value: {{auth}}
+  placement: header
+}
+
+body:json {
+  {
+    "patient" : "bcdd6773-c9a1-44e4-9cd6-968ad2f6aa3c",
+    "location" : "43e5c32e-aeb7-4a7a-8e43-c0f08fe59178",
+    "name" : "New Order",
+    "status" : "draft"
+  }
+}

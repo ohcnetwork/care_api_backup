@@ -1,0 +1,18 @@
+meta {
+  name: Search Patients by Name
+  type: http
+  seq: 10
+}
+
+post {
+  url: {{url}}/api/v1/patient/search/
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "config" : "2fff5fa7-b5fe-4907-858b-362e43946552" ,
+      "value" : "vi hari   "
+  }
+}

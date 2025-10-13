@@ -1,0 +1,15 @@
+meta {
+  name: Get Analytics Configs
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{url}}/api/analytics/config/
+  body: none
+  auth: inherit
+}
+
+settings {
+  encodeUrl: true
+}

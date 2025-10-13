@@ -1,0 +1,25 @@
+meta {
+  name: List Medication Dispense Orders
+  type: http
+  seq: 4
+}
+
+get {
+  url: {{url}}/api/v1/facility/:facility_id/order/dispense/
+  body: none
+  auth: inherit
+}
+
+params:query {
+  ~status: entered_in_error
+}
+
+params:path {
+  facility_id: 44113366-0f76-483e-9e5a-ca9ae80072f7
+}
+
+auth:apikey {
+  key: Authorization
+  value: {{auth}}
+  placement: header
+}

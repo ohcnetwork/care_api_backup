@@ -1,0 +1,19 @@
+meta {
+  name: List Supply Delivery Orders
+  type: http
+  seq: 6
+}
+
+get {
+  url: {{url}}/api/v1/facility/:facility_id/order/delivery/?origin_isnull=True
+  body: none
+  auth: inherit
+}
+
+params:query {
+  origin_isnull: True
+}
+
+params:path {
+  facility_id: 44113366-0f76-483e-9e5a-ca9ae80072f7
+}

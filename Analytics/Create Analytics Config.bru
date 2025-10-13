@@ -1,0 +1,29 @@
+meta {
+  name: Create Analytics Config
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{url}}/api/analytics/config/
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "name": "Test1",
+    "description" : "Test2",
+    "metadata" : {},
+    "handler" : "metabase",
+    "handler_args" : {"dashboard_id" : "2"},
+    "context_type" : "facility",
+    "context_mapping" : {
+      "facility_id" : "{{{facility_external_id}}}"
+    }
+  }
+}
+
+settings {
+  encodeUrl: true
+}

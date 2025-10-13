@@ -1,0 +1,16 @@
+meta {
+  name: List Unique Supply Deliveries Orders
+  type: http
+  seq: 6
+}
+
+get {
+  url: {{url}}/api/v1/supply_delivery/delivery_orders/?request_order=ca9b2f69-03db-4fbe-bd71-0887a3f196a0
+  body: none
+  auth: inherit
+}
+
+params:query {
+  request_order: ca9b2f69-03db-4fbe-bd71-0887a3f196a0
+  ~origin_isnull: False
+}

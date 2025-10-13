@@ -1,0 +1,25 @@
+meta {
+  name: Get Analytics URL
+  type: http
+  seq: 3
+}
+
+post {
+  url: {{url}}/api/analytics/config/:dashboard_id/generate_analytics_url/
+  body: json
+  auth: inherit
+}
+
+params:path {
+  dashboard_id: 2a3d19c3-0305-4d02-a3c4-9e425075c38c
+}
+
+body:json {
+  {
+    "context_id" : "60d4f3b1-6392-4c0f-bba1-f987c450f3bc"
+  }
+}
+
+settings {
+  encodeUrl: true
+}

@@ -1,0 +1,20 @@
+meta {
+  name: Get Patient Appointments
+  type: http
+  seq: 9
+}
+
+get {
+  url: {{url}}/api/v1/patient/:patient_id/get_appointments?facility=60d4f3b1-6392-4c0f-bba1-f987c450f3bc&status=in_progress
+  body: none
+  auth: inherit
+}
+
+params:query {
+  facility: 60d4f3b1-6392-4c0f-bba1-f987c450f3bc
+  status: in_progress
+}
+
+params:path {
+  patient_id: b2a296c4-1421-46b7-949b-4fc78cdd0e9e
+}

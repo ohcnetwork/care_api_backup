@@ -1,0 +1,24 @@
+meta {
+  name: Create Supply Delivery Orders
+  type: http
+  seq: 2
+}
+
+post {
+  url: {{url}}/api/v1/facility/:facility_id/location/:location_id/order/delivery/
+  body: json
+  auth: inherit
+}
+
+params:path {
+  facility_id: 44113366-0f76-483e-9e5a-ca9ae80072f7
+  location_id: 43e5c32e-aeb7-4a7a-8e43-c0f08fe59178
+}
+
+body:json {
+  {
+    
+    "name" : "New Order",
+    "status" : "draft"
+  }
+}
