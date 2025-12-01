@@ -1,0 +1,27 @@
+meta {
+  name: Update Template
+  type: http
+  seq: 4
+}
+
+put {
+  url: {{url}}/api/v1/template/i-somekind_template/
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "name" : "Somekind of Serious Template",
+    "status" : "active",
+    "default_format" : "pdf",
+    "slug_value" : "somekind_template",
+    "template_type" : "discharge_summary",
+    "context" : "encounter_base",
+    "template_data": "<h1> {{ encounter.status }}</h1><p>Age: </p> {% for item in encounter.symptoms.filter(verification_status='confirmed') %} test {{item.verification_status}} </br>test {{item.created_by.id}}</br> test {{item.updated_by.id}}</br>{% endfor %}{% for item in encounter.care_team %}test {{item.role.display}} </br>test {{item.user.id}} </br>test {{item.user.full_name}} </br>{% endfor %} </br> {% for questionnaire_response in encounter.questionnaire_responses.filter(slug='doctor-test123',limit=1) %} <h2> Question Response </h2> {% for response in questionnaire_response.responses %} {{response.question['text']}} {{response.answer['values'][0]['value']}} {{response.answer['values'][0]['value']}}</br> {% endfor %} {% endfor %}"
+  }
+}
+
+settings {
+  encodeUrl: true
+}

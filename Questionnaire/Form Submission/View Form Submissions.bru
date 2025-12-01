@@ -1,0 +1,34 @@
+meta {
+  name: View Form Submissions
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{url}}/api/v1/questionnaire/service_request_1/form_submission/?encounter=169a0cde-0667-4e15-9950-16163b1f2b9b
+  body: json
+  auth: inherit
+}
+
+params:query {
+  encounter: 169a0cde-0667-4e15-9950-16163b1f2b9b
+}
+
+auth:apikey {
+  key: Authorization
+  value: {{auth}}
+  placement: header
+}
+
+body:json {
+  {
+    "status" : "draft",
+    "response_dump" : {},
+    "encounter" : "169a0cde-0667-4e15-9950-16163b1f2b9b",
+    "patient" : "bcdd6773-c9a1-44e4-9cd6-968ad2f6aa3c"
+  }
+}
+
+docs {
+  Creates a new Questionnaire
+}

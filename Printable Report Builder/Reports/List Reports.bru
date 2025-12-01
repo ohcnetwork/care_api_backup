@@ -1,0 +1,20 @@
+meta {
+  name: List Reports
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{url}}/api/v1/template_reports/?report_type=discharge_summary&associating_id=ed2838e0-4103-430a-b294-8a8eee59eb13
+  body: none
+  auth: inherit
+}
+
+params:query {
+  report_type: discharge_summary
+  associating_id: ed2838e0-4103-430a-b294-8a8eee59eb13
+}
+
+settings {
+  encodeUrl: true
+}

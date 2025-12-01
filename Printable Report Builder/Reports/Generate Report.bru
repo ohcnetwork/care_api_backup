@@ -1,0 +1,22 @@
+meta {
+  name: Generate Report
+  type: http
+  seq: 2
+}
+
+post {
+  url: {{url}}/api/v1/template_reports/generate/
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "template_id" : "2d6df044-7b39-40bb-846b-c96110c30987",
+    "associating_id" : "ed2838e0-4103-430a-b294-8a8eee59eb13"  
+  }
+}
+
+settings {
+  encodeUrl: true
+}
